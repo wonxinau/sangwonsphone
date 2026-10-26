@@ -1,0 +1,755 @@
+{
+  "owner": {
+    "name": "Lee Sangwon",
+    "koreanName": "이상원",
+    "age": 23,
+    "group": "ALD1",
+    "position": "Main Dancer / Vocalist",
+    "deviceModel": "Sangwon's iPhone 16 Pro",
+    "clockTime": "23:48",
+    "clockDate": "Friday, December 4",
+    "carrier": "SKT 5G",
+    "batteryLevel": 89,
+    "pin": "0520",
+    "pinHint": "Hint: Anxinie's favorite romantic code (0520 = 我爱你 / I love you). Tap to autofill.",
+    "wallpaper": "assets/wallpaper_lock.jpg",
+    "homeWallpaper": "assets/wallpaper_home.jpg"
+  },
+  "notification": {
+    "delayMs": 2000,
+    "appName": "MESSAGES",
+    "sender": "Anxinie 🤍",
+    "avatar": "assets/avatar_anxin.jpg",
+    "time": "now",
+    "preview": "1 new message from Anxinie 🤍: Hyung, are you almost done at the studio? I left your favorite peach tea in the fridge...",
+    "targetChatId": "anxin"
+  },
+  "photos": [
+    {
+      "id": "photo_1",
+      "url": "assets/photos/photo_1.jpg",
+      "thumb": "assets/photos/photo_1.jpg",
+      "title": "Beanie Season & Matching Rings",
+      "caption": "First cold snap in Seoul. He borrowed my knit beanie and insisted on taking a mirror selfie to show off our promise rings in the warm lighting.",
+      "date": "Dec 01, 2026, 08:45 PM",
+      "location": "Practice Studio Fitting Room",
+      "favorite": true,
+      "category": "anxin"
+    },
+    {
+      "id": "photo_2",
+      "url": "assets/photos/photo_2.jpg",
+      "thumb": "assets/photos/photo_2.jpg",
+      "title": "Monochrome Editorial Duo Cut",
+      "caption": "The photographer told us to look aloof and mysterious, but every time the camera flashed, Anxinie kept whispering silly jokes behind my back.",
+      "date": "Nov 14, 2026, 04:30 PM",
+      "location": "Studio V, Gangnam",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_3",
+      "url": "assets/photos/photo_3.jpg",
+      "thumb": "assets/photos/photo_3.jpg",
+      "title": "Matching Promise Rings & Outtakes",
+      "caption": "Manager Park looked away for two seconds and Anxinie immediately broke character to poke my cheek. Our matching silver rings were engraved 'S ♡ A' for 1204.",
+      "date": "Nov 14, 2026, 04:45 PM",
+      "location": "Studio V, Gangnam",
+      "favorite": true,
+      "category": "anxin"
+    },
+    {
+      "id": "photo_4",
+      "url": "assets/photos/photo_4.jpg",
+      "thumb": "assets/photos/photo_4.jpg",
+      "title": "Midnight Melody Back Hug",
+      "caption": "He was struggling with the high falsetto transition on Track 4. I came up behind him at the keyboard and told him to breathe with me until his pulse calmed down.",
+      "date": "Nov 25, 2026, 02:10 AM",
+      "location": "ALD1 Vocal Studio 3",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_5",
+      "url": "assets/photos/photo_5.jpg",
+      "thumb": "assets/photos/photo_5.jpg",
+      "title": "Catching Your Laughter",
+      "caption": "Whenever I hug him from behind like this, he always buries his face in my sleeves laughing. That laughter is my whole world.",
+      "date": "Nov 25, 2026, 02:12 AM",
+      "location": "ALD1 Vocal Studio 3",
+      "favorite": true,
+      "category": "anxin"
+    },
+    {
+      "id": "photo_6",
+      "url": "assets/photos/photo_6.jpg",
+      "thumb": "assets/photos/photo_6.jpg",
+      "title": "Comeback Teaser Duo Unit",
+      "caption": "Official unit photo for the repackage album. Fans called our chemistry electric—if only they knew how real it was.",
+      "date": "Oct 28, 2026, 05:20 PM",
+      "location": "Seongsu Production Set B",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_7",
+      "url": "assets/photos/photo_7.jpg",
+      "thumb": "assets/photos/photo_7.jpg",
+      "title": "Post-Shoot Double V",
+      "caption": "'We\\'re finally done!' Anxinie threw up double peace signs right before dragging me to get hot tteokbokki.",
+      "date": "Oct 28, 2026, 05:35 PM",
+      "location": "Seongsu Production Set B",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_8",
+      "url": "assets/photos/photo_8.jpg",
+      "thumb": "assets/photos/photo_8.jpg",
+      "title": "Tokyo Tower Midnight Stroll",
+      "caption": "We sneaked out from the hotel after the Tokyo Dome soundcheck. The city lights were breathtaking, but I couldn\\'t take my eyes off him.",
+      "date": "Nov 10, 2026, 11:42 PM",
+      "location": "Roppongi, Tokyo",
+      "favorite": true,
+      "category": "travel"
+    },
+    {
+      "id": "photo_9",
+      "url": "assets/photos/photo_9.jpg",
+      "thumb": "assets/photos/photo_9.jpg",
+      "title": "Cozy Dorm Sweater Weather",
+      "caption": "Wearing our softest oversized sweaters after a 12-hour choreo rehearsal. Just staying quiet together in the dark.",
+      "date": "Dec 02, 2026, 01:20 AM",
+      "location": "Cheongdam Dorm Bedroom",
+      "favorite": false,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_10",
+      "url": "assets/photos/photo_10.jpg",
+      "thumb": "assets/photos/photo_10.jpg",
+      "title": "Warmth Before Sleep",
+      "caption": "He always gets cold after showering. Squeezing him close until his hands warm up.",
+      "date": "Nov 20, 2026, 12:55 AM",
+      "location": "Cheongdam Dorm Bedroom",
+      "favorite": true,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_11",
+      "url": "assets/photos/photo_11.jpg",
+      "thumb": "assets/photos/photo_11.jpg",
+      "title": "Hoodie Season Morning Routine",
+      "caption": "Early morning music show pre-recording call time. Still half asleep, leaning into each other.",
+      "date": "Nov 17, 2026, 07:15 AM",
+      "location": "Dorm Hallway Mirror",
+      "favorite": false,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_12",
+      "url": "assets/photos/photo_12.jpg",
+      "thumb": "assets/photos/photo_12.jpg",
+      "title": "Green Room Rehearsal Break",
+      "caption": "Drinking iced peach americanos between dry rehearsals while reviewing our harmony cues.",
+      "date": "Nov 04, 2026, 03:30 PM",
+      "location": "Mnet M Countdown Waiting Room",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_13",
+      "url": "assets/photos/photo_13.jpg",
+      "thumb": "assets/photos/photo_13.jpg",
+      "title": "Sub-Zero Incheon Walk",
+      "caption": "Freezing minus 5 degrees outside. Buried inside long padded parkas, marching towards our flight to Osaka.",
+      "date": "Nov 29, 2026, 06:10 AM",
+      "location": "Incheon Airport T2",
+      "favorite": false,
+      "category": "travel"
+    },
+    {
+      "id": "photo_14",
+      "url": "assets/photos/photo_14.jpg",
+      "thumb": "assets/photos/photo_14.jpg",
+      "title": "Encore High: Double Cheek Hearts",
+      "caption": "Adrenaline still pumping after the 3-hour stadium concert. Sangwon\\'s blonde hair messy, Anxinie glowing.",
+      "date": "Nov 15, 2026, 09:40 PM",
+      "location": "Backstage Green Room, Osaka-jo Hall",
+      "favorite": true,
+      "category": "stage"
+    },
+    {
+      "id": "photo_15",
+      "url": "assets/photos/photo_15.jpg",
+      "thumb": "assets/photos/photo_15.jpg",
+      "title": "Setlist Last Check",
+      "caption": "Reviewing the stage blocking on Sangwon\\'s phone five minutes before the live broadcast.",
+      "date": "Oct 18, 2026, 06:50 PM",
+      "location": "KBS Music Bank Backstage",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_16",
+      "url": "assets/photos/photo_16.jpg",
+      "thumb": "assets/photos/photo_16.jpg",
+      "title": "Autumn Collegiate Concept",
+      "caption": "Felt like college sweethearts for an afternoon during this campus season\\'s greetings photoshoot.",
+      "date": "Sep 28, 2026, 02:15 PM",
+      "location": "Hanyang University Campus Set",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_17",
+      "url": "assets/photos/photo_17.jpg",
+      "thumb": "assets/photos/photo_17.jpg",
+      "title": "Tour Van Highway Daze",
+      "caption": "Heading back from the Daejeon festival. The other members fell asleep within five minutes.",
+      "date": "Oct 22, 2026, 11:30 PM",
+      "location": "Gyeongbu Expressway",
+      "favorite": false,
+      "category": "travel"
+    },
+    {
+      "id": "photo_18",
+      "url": "assets/photos/photo_18.jpg",
+      "thumb": "assets/photos/photo_18.jpg",
+      "title": "Dance Studio Golden Hour",
+      "caption": "When the golden sunset streams through the mirrored hall and Anxinie wraps his arms around my neck.",
+      "date": "Nov 06, 2026, 05:15 PM",
+      "location": "ALD1 Dance Studio 1",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_19",
+      "url": "assets/photos/photo_19.jpg",
+      "thumb": "assets/photos/photo_19.jpg",
+      "title": "Hidden Alley Embrace",
+      "caption": "Away from dispatch cameras and manager eyes. Just one quiet hug under the autumn streetlamp.",
+      "date": "Oct 14, 2026, 09:30 PM",
+      "location": "Samcheong-dong Stone Wall Walkway",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_20",
+      "url": "assets/photos/photo_20.jpg",
+      "thumb": "assets/photos/photo_20.jpg",
+      "title": "Studio Sanctuary (Duo Take)",
+      "caption": "No matter how tired our muscles ache after 8 hours of dancing, being in your arms washes it all away.",
+      "date": "Nov 06, 2026, 05:18 PM",
+      "location": "ALD1 Dance Studio 1",
+      "favorite": false,
+      "category": "candid"
+    },
+    {
+      "id": "photo_21",
+      "url": "assets/photos/photo_21.jpg",
+      "thumb": "assets/photos/photo_21.jpg",
+      "title": "Secret Back Pocket Touch",
+      "caption": "We couldn\\'t hold hands openly in public, so he slipped his fingers secretly into my back pocket as we walked.",
+      "date": "Sep 15, 2026, 10:12 PM",
+      "location": "Hangang Ttukseom Park",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_22",
+      "url": "assets/photos/photo_22.jpg",
+      "thumb": "assets/photos/photo_22.jpg",
+      "title": "3 AM Convenience Store Run",
+      "caption": "Horn-rimmed glasses, messy hair, buying banana milk and ramen after a midnight recording session.",
+      "date": "Oct 05, 2026, 03:22 AM",
+      "location": "GS25 Cheongdam Sageori",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_23",
+      "url": "assets/photos/photo_23.jpg",
+      "thumb": "assets/photos/photo_23.jpg",
+      "title": "Intertwined Under the Blanket",
+      "caption": "Fingers laced together in the dark. The unspoken promise that we\\'re never letting go.",
+      "date": "Nov 21, 2026, 01:45 AM",
+      "location": "Cheongdam Dorm Bedroom",
+      "favorite": true,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_24",
+      "url": "assets/photos/photo_24.jpg",
+      "thumb": "assets/photos/photo_24.jpg",
+      "title": "Flight KE001: 35,000 Feet",
+      "caption": "Shared window seat on the 11-hour flight to LA. Sangwon stayed awake so Anxin could sleep on his shoulder.",
+      "date": "Nov 08, 2026, 01:10 PM",
+      "location": "En route to Los Angeles (Boeing 777)",
+      "favorite": true,
+      "category": "travel"
+    },
+    {
+      "id": "photo_25",
+      "url": "assets/photos/photo_25.jpg",
+      "thumb": "assets/photos/photo_25.jpg",
+      "title": "Our Secret Frequency (Acoustic Guide)",
+      "caption": "White wired earphone cords tangled between our collars. Listening to the acoustic demo of 'Song for A.'",
+      "date": "Oct 19, 2026, 10:14 PM",
+      "location": "KTX Train 108",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_26",
+      "url": "assets/photos/photo_26.jpg",
+      "thumb": "assets/photos/photo_26.jpg",
+      "title": "Window Seat Gaze",
+      "caption": "'Stop taking photos and sleep, Anxinie.' But I never looked away from his lens.",
+      "date": "Nov 08, 2026, 03:40 PM",
+      "location": "Pacific Ocean Skies",
+      "favorite": false,
+      "category": "travel"
+    },
+    {
+      "id": "photo_27",
+      "url": "assets/photos/photo_27.jpg",
+      "thumb": "assets/photos/photo_27.jpg",
+      "title": "Holding Hands in the Shadows",
+      "caption": "Where the city lights couldn\\'t reach us. Our palms warm against the crisp autumn breeze.",
+      "date": "Sep 22, 2026, 11:05 PM",
+      "location": "Namsan Tower Quiet Trail",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_28",
+      "url": "assets/photos/photo_28.jpg",
+      "thumb": "assets/photos/photo_28.jpg",
+      "title": "Matching 'Boyfriend' Tees (Secretly)",
+      "caption": "We bought these as a silly joke in Harajuku. Wore them inside the private villa where no cameras could see.",
+      "date": "Aug 14, 2026, 04:20 PM",
+      "location": "Jeju Dorm Vacation House",
+      "favorite": true,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_29",
+      "url": "assets/photos/photo_29.jpg",
+      "thumb": "assets/photos/photo_29.jpg",
+      "title": "The Dorm Alley Cat",
+      "caption": "This stray orange cat always waits outside the convenience store. Anxinie spent 15 minutes feeding it canned tuna.",
+      "date": "Oct 10, 2026, 05:45 PM",
+      "location": "Nonhyeon-dong Alley",
+      "favorite": false,
+      "category": "candid"
+    },
+    {
+      "id": "photo_30",
+      "url": "assets/photos/photo_30.jpg",
+      "thumb": "assets/photos/photo_30.jpg",
+      "title": "Post-Soundcheck Glow",
+      "caption": "Microphones taped to our ears, stage makeup set. One quick photo before opening doors to 40,000 fans.",
+      "date": "Nov 12, 2026, 06:15 PM",
+      "location": "Kyocera Dome Backstage",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_31",
+      "url": "assets/photos/photo_31.jpg",
+      "thumb": "assets/photos/photo_31.jpg",
+      "title": "Harmony Center Stage",
+      "caption": "Under the blinding spotlights, singing our duo bridge. The only thing that calms my racing heart is hearing his voice beside me.",
+      "date": "Nov 02, 2026, 09:20 PM",
+      "location": "Gocheok Sky Dome, Seoul",
+      "favorite": true,
+      "category": "stage"
+    },
+    {
+      "id": "photo_32",
+      "url": "assets/photos/photo_32.jpg",
+      "thumb": "assets/photos/photo_32.jpg",
+      "title": "Backstage Ethereal Look",
+      "caption": "The stylist gave Anxinie this peach blossom blush. Sangwon stared for so long the hair director started teasing them.",
+      "date": "Oct 25, 2026, 07:10 PM",
+      "location": "SBS Inkigayo Green Room",
+      "favorite": true,
+      "category": "anxin"
+    },
+    {
+      "id": "photo_33",
+      "url": "assets/photos/photo_33.jpg",
+      "thumb": "assets/photos/photo_33.jpg",
+      "title": "Pinky Promise at Cloud Level",
+      "caption": "'Let\\'s conquer the world tour together, hyung.' Our matching promise rings tapping together against the airplane window.",
+      "date": "Nov 08, 2026, 05:00 PM",
+      "location": "Sky over North America",
+      "favorite": true,
+      "category": "travel"
+    },
+    {
+      "id": "photo_34",
+      "url": "assets/photos/photo_34.jpg",
+      "thumb": "assets/photos/photo_34.jpg",
+      "title": "Wardrobe Fitting Mirror",
+      "caption": "Trying on customized tour stage outfits. Anxinie kept adjusting Sangwon\\'s collar to make sure it sat straight.",
+      "date": "Oct 08, 2026, 02:40 PM",
+      "location": "Apgujeong Stylist Studio",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_35",
+      "url": "assets/photos/photo_35.jpg",
+      "thumb": "assets/photos/photo_35.jpg",
+      "title": "Exhausted Slumber",
+      "caption": "Crashed into bed without even changing out of sweatpants after 14 hours of dance practice. He looked so small curled under the blanket.",
+      "date": "Nov 03, 2026, 04:15 AM",
+      "location": "Cheongdam Dorm Bedroom",
+      "favorite": true,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_36",
+      "url": "assets/photos/photo_36.jpg",
+      "thumb": "assets/photos/photo_36.jpg",
+      "title": "Lazy Sunday in the Dorm",
+      "caption": "Rare day off with no schedules. No alarms, no managers, just listening to indie vinyl records on the floor.",
+      "date": "Sep 20, 2026, 01:30 PM",
+      "location": "Cheongdam Dorm Room",
+      "favorite": false,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_37",
+      "url": "assets/photos/photo_37.jpg",
+      "thumb": "assets/photos/photo_37.jpg",
+      "title": "Peach Blossom Aesthetic (Angle B)",
+      "caption": "Another sweet candid saved to Sangwon\\'s hidden album. Anxinie\\'s pure gaze straight into the camera.",
+      "date": "Oct 25, 2026, 07:12 PM",
+      "location": "SBS Inkigayo Green Room",
+      "favorite": false,
+      "category": "anxin"
+    },
+    {
+      "id": "photo_38",
+      "url": "assets/photos/photo_38.jpg",
+      "thumb": "assets/photos/photo_38.jpg",
+      "title": "Hold Me Close (Cashmere Knits)",
+      "caption": "Soft wool against skin. When words aren\\'t needed at the end of an exhausting week.",
+      "date": "Nov 19, 2026, 11:55 PM",
+      "location": "Cheongdam Dorm Bedroom",
+      "favorite": true,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_39",
+      "url": "assets/photos/photo_39.jpg",
+      "thumb": "assets/photos/photo_39.jpg",
+      "title": "Twin Visuals: Rehearsal Focus",
+      "caption": "Checking monitor audio together. The harmony between our voices is something that took years to weave.",
+      "date": "Oct 30, 2026, 04:40 PM",
+      "location": "Clover Music Recording Studio",
+      "favorite": false,
+      "category": "candid"
+    },
+    {
+      "id": "photo_40",
+      "url": "assets/photos/photo_40.jpg",
+      "thumb": "assets/photos/photo_40.jpg",
+      "title": "Height Check Shenanigans",
+      "caption": "Anxinie stood on his tiptoes swearing he grew another centimeter this month. Sangwon couldn\\'t stop teasing him.",
+      "date": "Sep 12, 2026, 03:10 PM",
+      "location": "Dance Practice Lounge",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_41",
+      "url": "assets/photos/photo_41.jpg",
+      "thumb": "assets/photos/photo_41.jpg",
+      "title": "Film Camera Memories (90s Grain)",
+      "caption": "Found a disposable 35mm camera at a thrift shop. The developed film came out looking like 90s cinema.",
+      "date": "Aug 29, 2026, 07:20 PM",
+      "location": "Hongdae Vintage Thrift Shop",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_42",
+      "url": "assets/photos/photo_42.jpg",
+      "thumb": "assets/photos/photo_42.jpg",
+      "title": "Midnight Streetlamp Embrace",
+      "caption": "Walking back to the dorm after midnight. Pulling him into a deep hug where no fans could follow.",
+      "date": "Oct 12, 2026, 11:30 PM",
+      "location": "Cheongdam Residential Alley",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_43",
+      "url": "assets/photos/photo_43.jpg",
+      "thumb": "assets/photos/photo_43.jpg",
+      "title": "Shadow Kiss on Pavement",
+      "caption": "Our shadows told the truth the world wasn\\'t ready to see yet. A secret kiss projected on the asphalt.",
+      "date": "Oct 31, 2026, 10:45 PM",
+      "location": "Mapo Riverbank Trail",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_44",
+      "url": "assets/photos/photo_44.jpg",
+      "thumb": "assets/photos/photo_44.jpg",
+      "title": "Echoes of Light (Concept Duo)",
+      "caption": "The official concept portrait that drove the fandom into a frenzy. Sangwon kept this uncropped high-res copy on his phone.",
+      "date": "Sep 05, 2026, 01:25 PM",
+      "location": "Studio A-List, Paju",
+      "favorite": true,
+      "category": "stage"
+    },
+    {
+      "id": "photo_45",
+      "url": "assets/photos/photo_45.jpg",
+      "thumb": "assets/photos/photo_45.jpg",
+      "title": "Highway Smiles in the Van",
+      "caption": "Long drives are bearable only because you\\'re sitting right beside me.",
+      "date": "Oct 22, 2026, 11:35 PM",
+      "location": "Gyeongbu Expressway",
+      "favorite": false,
+      "category": "travel"
+    },
+    {
+      "id": "photo_46",
+      "url": "assets/photos/photo_46.jpg",
+      "thumb": "assets/photos/photo_46.jpg",
+      "title": "Late Night Video Call Screen",
+      "caption": "When Anxin had to fly back to China for 3 days to renew his visa. Neither of us hung up until 4 AM.",
+      "date": "Sep 18, 2026, 01:15 AM",
+      "location": "Chongqing - Seoul Call",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_47",
+      "url": "assets/photos/photo_47.jpg",
+      "thumb": "assets/photos/photo_47.jpg",
+      "title": "Composing Together in Bed",
+      "caption": "Logic Pro open on the MacBook, fine-tuning vocal harmonies while sharing a bowl of strawberries.",
+      "date": "Nov 11, 2026, 11:50 PM",
+      "location": "Cheongdam Dorm Bedroom",
+      "favorite": true,
+      "category": "dorm"
+    },
+    {
+      "id": "photo_48",
+      "url": "assets/photos/photo_48.jpg",
+      "thumb": "assets/photos/photo_48.jpg",
+      "title": "School Uniform Concept Nostalgia",
+      "caption": "'What if we had met back in high school, hyung?' Anxinie asked while untying his uniform collar.",
+      "date": "Aug 19, 2026, 03:40 PM",
+      "location": "Gyeonggi High School Film Set",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_49",
+      "url": "assets/photos/photo_49.jpg",
+      "thumb": "assets/photos/photo_49.jpg",
+      "title": "Bookstore Hide and Seek",
+      "caption": "Hiding our faces behind photography art books when tourists walked by our aisle.",
+      "date": "Oct 04, 2026, 04:10 PM",
+      "location": "Kyobo Book Centre, Gwanghwamun",
+      "favorite": false,
+      "category": "candid"
+    },
+    {
+      "id": "photo_50",
+      "url": "assets/photos/photo_50.jpg",
+      "thumb": "assets/photos/photo_50.jpg",
+      "title": "My Anchor, My Home",
+      "caption": "Simple white tees, no makeup, no stage persona. Just Anxin resting his tired head on my shoulder.",
+      "date": "Aug 02, 2026, 06:30 PM",
+      "location": "Studio Sunlight Room",
+      "favorite": true,
+      "category": "anxin"
+    },
+    {
+      "id": "photo_51",
+      "url": "assets/photos/photo_51.jpg",
+      "thumb": "assets/photos/photo_51.jpg",
+      "title": "Special Stage Encore Cap",
+      "caption": "Right after our winning performance. Wearing the stage captain caps and celebrating backstage.",
+      "date": "Oct 15, 2026, 08:50 PM",
+      "location": "Mnet M Countdown Stage Wings",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_52",
+      "url": "assets/photos/photo_52.jpg",
+      "thumb": "assets/photos/photo_52.jpg",
+      "title": "Unbroken Devotion",
+      "caption": "'Even under thousands of stage spotlights, my eyes only search for you.' The gaze that never wavers.",
+      "date": "Jul 28, 2026, 02:00 PM",
+      "location": "Concept Studio Alpha",
+      "favorite": true,
+      "category": "stage"
+    },
+    {
+      "id": "photo_53",
+      "url": "assets/photos/photo_53.jpg",
+      "thumb": "assets/photos/photo_53.jpg",
+      "title": "Passionate Red: Duo Harmony",
+      "caption": "Our red-and-black contrast concept. The stylists said our contrast was perfection.",
+      "date": "Jul 28, 2026, 02:25 PM",
+      "location": "Concept Studio Alpha",
+      "favorite": false,
+      "category": "stage"
+    },
+    {
+      "id": "photo_54",
+      "url": "assets/photos/photo_54.jpg",
+      "thumb": "assets/photos/photo_54.jpg",
+      "title": "Sunset by the Han River",
+      "caption": "Sangwon walking along the riverbank in his tailored jacket after the solo choreography shoot. Anxin was waiting behind the camera.",
+      "date": "Sep 25, 2026, 05:45 PM",
+      "location": "Yeouido River Park",
+      "favorite": true,
+      "category": "candid"
+    },
+    {
+      "id": "photo_55",
+      "url": "assets/photos/photo_55.jpg",
+      "thumb": "assets/photos/photo_55.jpg",
+      "title": "Couch Giggles in the Small Studio",
+      "caption": "Anxin sent this to me: 'Look at you trying to hide your face, hyung!' That afternoon we were curled up together on the black leather couch in the small vocal room, laughing and playing until we lost track of time.",
+      "date": "Nov 27, 2026, 04:22 PM",
+      "location": "Studio B Couch, ALD1 Floor",
+      "favorite": true,
+      "category": "anxin"
+    },
+    {
+      "id": "photo_56",
+      "url": "assets/photos/photo_56.jpg",
+      "thumb": "assets/photos/photo_56.jpg",
+      "title": "Looking Up at You (Sent by Anxin)",
+      "caption": "Anxin took this from above while standing over the couch. Messy hair falling in my eyes, power bank and AirPods scattered around us while we played our favorite mobile games and shared snacks.",
+      "date": "Nov 27, 2026, 04:25 PM",
+      "location": "Studio B Couch, ALD1 Floor",
+      "favorite": true,
+      "category": "anxin"
+    }
+  ],
+  "notes": [
+    {
+      "id": "note_1",
+      "title": "ALD1 World Tour - Rehearsal & Vocal Setlist",
+      "date": "Dec 03, 2026",
+      "snippet": "Opening: Track 01 'Supernova' -> Duo Center Unit with Anxinie...",
+      "locked": false,
+      "content": "ALD1 WORLD TOUR 2026-2027 REHEARSAL CHECKLIST\n=============================================\n1. Opening Stage: 'Supernova' (Formation 3 -> 1)\n2. Title Track: 'Echoes of Light' (Live vocal mic gain +2dB)\n3. Duo Stage (Sangwon & Anxin):\n   - Rehearse the hand-reach transition at bridge 02:45\n   - Check in-ear monitor mix (pan Anxin's vocal to my left ear)\n   - Don't linger holding hands too long on the revolving riser—Manager Park warned us fans were screaming last soundcheck.\n4. Encore: Acoustic medley with lightstick wave."
+    },
+    {
+      "id": "note_2",
+      "title": "Little Things to Remember About Anxinie 🤍",
+      "date": "Nov 18, 2026",
+      "snippet": "Peach iced tea, hates cucumbers, gets homesick when winter begins...",
+      "locked": false,
+      "content": "THINGS ANXINIE LOVES & NEEDS:\n- Loves peach iced tea (50% sugar, less ice).\n- Hates cucumbers with a passion (pick them out of kimbap for him).\n- When he misses Chongqing or his family, make tomato egg noodles late at night.\n- Always gets cold hands after music show dry runs—keep hand warmers in my bag.\n- Loves sleeping on the left side of our bed facing the window.\n- Needs gentle hugs when choreo practice gets overwhelming.\n- Tells me 'Wo ai ni' in Chinese whenever he thinks I'm asleep."
+    },
+    {
+      "id": "note_3",
+      "title": "Private Diary - For Anxinie (500 Days)",
+      "date": "Dec 04, 2026",
+      "snippet": "LOCKED NOTE • Our secret rooftop confession & promise.",
+      "locked": true,
+      "pin": "1204",
+      "pinHint": "Hint: Our anniversary date (1204 = December 4th on the rooftop ring)!",
+      "content": "TO MY ANXINIE (500 DAYS TOGETHER)\n===================================\nDecember 4th.\n\nTwo years ago on that freezing dorm rooftop, when you handed me your scarf and confessed that you liked me, I was terrified. We were rookies about to debut in ALD1, and the entire world expected us to be flawless, untouchable idols.\n\nEvery day since then, keeping our love hidden has been our sweetest, most precious secret. When we stand together on stadium stages before tens of thousands of fans, hearing you harmonize next to me gives me courage I never knew I had.\n\nI promise you, Anxinie:\nNo matter how chaotic this industry gets, no matter how many schedules they throw at us, I will always be your home. When the cameras turn off and the lights go down, I am just Sangwon, and you are my whole heart.\n\nHappy 500 days, my love.\n\n— Sangwon (상원)"
+    },
+    {
+      "id": "note_4",
+      "title": "Noona's Care Package & Vitamin Schedule",
+      "date": "Nov 24, 2026",
+      "snippet": "Jiwoo Noona sent 4 boxes of ginseng and mom's homemade side dishes...",
+      "locked": false,
+      "content": "CARE PACKAGE FROM NOONA:\n[✓] 4x Boxes Korean Red Ginseng Royal Tonic (Take 1 pouch daily, give 2 boxes to Anxin!)\n[✓] Mom's Braised Galbi-jjim (Heat for 4 mins)\n[✓] Organic propolis throat spray for concert vocal protection\n[✓] Calming sheet masks for Anxinie's skin routine\n\nNoona's Note:\n'Sangwon-ah, your group is reaching #1 everywhere, but don't forget to rest. Eat every single bite of this meat! Give Anxinie a big hug from me and tell him he did great on yesterday's radio show! 💕'"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "anxin",
+      "name": "Anxinie 🤍",
+      "fullName": "Zhou Anxin (周安心)",
+      "phone": "+82 10-5200-1204",
+      "avatar": "assets/avatar_anxin.jpg",
+      "status": "Active now",
+      "relation": "Lover / ALD1 Vocal"
+    },
+    {
+      "id": "noona",
+      "name": "Jiwoo Noona 💕",
+      "fullName": "Lee Jiwoo (이지우)",
+      "phone": "+82 10-8821-4902",
+      "avatar": "assets/avatar_noona.jpg",
+      "status": "Last seen 10m ago",
+      "relation": "Older Sister"
+    },
+    {
+      "id": "manager",
+      "name": "Manager Park",
+      "fullName": "Park Jinwoo (ALD1 Head Mgr)",
+      "phone": "+82 10-9941-3301",
+      "avatar": "assets/avatar_manager.jpg",
+      "status": "ALD1 Management",
+      "relation": "Manager"
+    },
+    {
+      "id": "ald1_dorm",
+      "name": "ALD1 Chaos Dorm 🎤",
+      "fullName": "ALD1 Members (6)",
+      "phone": "Group (6 members)",
+      "avatar": "assets/avatar_ald1.jpg",
+      "status": "4 new messages",
+      "relation": "Group Chat"
+    }
+  ],
+  "callHistory": [
+    {
+      "name": "Anxinie 🤍",
+      "type": "missed",
+      "time": "23:42",
+      "count": 2,
+      "phone": "+82 10-5200-1204"
+    },
+    {
+      "name": "Jiwoo Noona 💕",
+      "type": "incoming",
+      "time": "21:15",
+      "duration": "14m 20s",
+      "phone": "+82 10-8821-4902"
+    },
+    {
+      "name": "Manager Park",
+      "type": "incoming",
+      "time": "19:30",
+      "duration": "2m 10s",
+      "phone": "+82 10-9941-3301"
+    },
+    {
+      "name": "Anxinie 🤍",
+      "type": "outgoing",
+      "time": "18:05",
+      "duration": "28m 40s",
+      "phone": "+82 10-5200-1204"
+    }
+  ],
+  "voicemail": {
+    "sender": "Anxinie 🤍",
+    "time": "23:43 (5 minutes ago)",
+    "duration": "0:28",
+    "transcript": "\"Hyung... you didn't answer, so you must still be in the recording booth polishing the vocals. It's almost midnight. Come home safely, okay? I left the warm light on for you in our room... love you.\""
+  }
+}

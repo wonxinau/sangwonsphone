@@ -1,0 +1,21 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test & temporary media
+screenshot_*.png
+test_*.py
+capture_*.py

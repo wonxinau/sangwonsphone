@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#000000">
+  <title>Sangwon's Phone • ALD1</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/icon_192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Desktop Ambient Canvas & Outer Controls -->
+  <div class="desktop-backdrop">
+    <div class="desktop-header">
+      <div class="story-tag">ALD1 IDOL ROMANCE</div>
+      <h1>Snooping on Sangwon's Phone</h1>
+      <p class="story-desc">Discover the secret idol romance between Sangwon (23) & Anxinie (20) of ALD1, plus sweet doting messages from his older sister!</p>
+      <div class="desktop-actions">
+        <button id="btn-desktop-hint" class="action-btn" title="Autofill Lock PIN">Autofill PIN (0520)</button>
+        <button id="btn-desktop-lock" class="action-btn" title="Lock the device">Lock Device</button>
+        <button id="btn-desktop-sound" class="action-btn" title="Toggle Sound">Sound: ON</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Physical Phone Chassis (Centered on Desktop, Fullscreen on Mobile) -->
+  <main class="device-wrapper">
+    <!-- Physical Side Buttons on phone body -->
+    <div class="hardware-button action-button" title="Action Button"></div>
+    <div class="hardware-button volume-up" title="Volume Up"></div>
+    <div class="hardware-button volume-down" title="Volume Down"></div>
+    <div class="hardware-button power-button" id="hardware-power-btn" title="Power / Lock"></div>
+
+    <!-- Phone Screen Container (9:19.5 aspect ratio) -->
+    <div class="phone-screen" id="phone-screen">
+      
+      <!-- Top Dynamic Island & Speaker -->
+      <div class="dynamic-island-wrapper">
+        <div class="dynamic-island" id="dynamic-island">
+          <div class="island-camera"></div>
+          <div class="island-content">
+            <span class="island-dot"></span>
+            <span class="island-text" id="island-text">ALD1 Duo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Status Bar (Visible on all screens) -->
+      <header class="status-bar" id="status-bar">
+        <div class="status-left">
+          <span class="status-time" id="status-time">23:48</span>
+        </div>
+        <div class="status-right">
+          <!-- Cellular signal -->
+          <div class="signal-bars" title="Signal: Excellent">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+            <span class="bar bar-4"></span>
+          </div>
+          <!-- Carrier network tag -->
+          <span class="carrier-tag" id="status-carrier">SKT 5G</span>
+          <!-- Wi-Fi icon -->
+          <svg class="status-icon wifi-icon" viewBox="0 0 24 24" width="16" height="16">
+            <path d="M12 3C7.5 3 3.5 4.8 0.5 7.7L12 21.5L23.5 7.7C20.5 4.8 16.5 3 12 3Z" fill="currentColor"/>
+          </svg>
+          <!-- Battery icon -->
+          <div class="battery-wrapper" title="Battery: 89%">
+            <span class="battery-percent" id="status-battery-text">89%</span>
+            <div class="battery-shell">
+              <div class="battery-level" id="status-battery-fill" style="width: 89%;"></div>
+            </div>
+            <div class="battery-tip"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ============================================== -->
+      <!-- SCREEN 1: LOCK SCREEN                          -->
+      <!-- ============================================== -->
+      <section class="screen lock-screen active" id="lock-screen">
+        <div class="wallpaper-bg lock-wallpaper" id="lock-wallpaper-bg"></div>
+        <div class="lock-vignette"></div>
+
+        <div class="lock-content">
+          <!-- Padlock Status -->
+          <div class="lock-icon-wrapper" id="lock-padlock">
+            <svg class="padlock-svg" viewBox="0 0 24 24" width="22" height="22">
+              <path class="shackle" d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <rect x="5" y="11" width="14" height="10" rx="3" fill="currentColor"/>
+            </svg>
+          </div>
+
+          <!-- Time & Date -->
+          <div class="lock-clock-area">
+            <div class="lock-date" id="lock-date">Friday, December 4</div>
+            <div class="lock-time" id="lock-time">23:48</div>
+          </div>
+
+          <!-- Passcode Keypad Section -->
+          <div class="passcode-section">
+            <div class="passcode-label" id="lock-prompt-text">Enter Passcode</div>
+            
+            <!-- 4 PIN Dots -->
+            <div class="pin-dots" id="pin-dots">
+              <div class="pin-dot" data-index="0"></div>
+              <div class="pin-dot" data-index="1"></div>
+              <div class="pin-dot" data-index="2"></div>
+              <div class="pin-dot" data-index="3"></div>
+            </div>
+
+            <!-- Keypad Matrix (Frosted Round Buttons) -->
+            <div class="keypad-grid" id="lock-keypad">
+              <button class="keypad-btn" data-key="1">
+                <span class="num">1</span>
+                <span class="sub">&nbsp;</span>
+              </button>
+              <button class="keypad-btn" data-key="2">
+                <span class="num">2</span>
+                <span class="sub">ABC</span>
+              </button>
+              <button class="keypad-btn" data-key="3">
+                <span class="num">3</span>
+                <span class="sub">DEF</span>
+              </button>
+              <button class="keypad-btn" data-key="4">
+                <span class="num">4</span>
+                <span class="sub">GHI</span>
+              </button>
+              <button class="keypad-btn" data-key="5">
+                <span class="num">5</span>
+                <span class="sub">JKL</span>
+              </button>
+              <button class="keypad-btn" data-key="6">
+                <span class="num">6</span>
+                <span class="sub">MNO</span>
+              </button>
+              <button class="keypad-btn" data-key="7">
+                <span class="num">7</span>
+                <span class="sub">PQRS</span>
+              </button>
+              <button class="keypad-btn" data-key="8">
+                <span class="num">8</span>
+                <span class="sub">TUV</span>
+              </button>
+              <button class="keypad-btn" data-key="9">
+                <span class="num">9</span>
+                <span class="sub">WXYZ</span>
+              </button>
+              <!-- Row 4: Hint / 0 / Delete -->
+              <button class="keypad-btn aux-btn" id="btn-keypad-hint" title="Show Hint">
+                <span class="aux-text">Hint</span>
+              </button>
+              <button class="keypad-btn" data-key="0">
+                <span class="num">0</span>
+                <span class="sub">+</span>
+              </button>
+              <button class="keypad-btn aux-btn" id="btn-keypad-delete" title="Delete">
+                <span class="aux-text">Delete</span>
+              </button>
+            </div>
+
+            <!-- PIN Hint Display -->
+            <div class="pin-hint-box" id="pin-hint-box">
+              <span class="hint-icon">🤍</span>
+              <span class="hint-text" id="lock-hint-text">Hint: Anxinie's favorite romantic code (0520 = 我爱你 / I love you). Tap to autofill.</span>
+            </div>
+          </div>
+
+          <!-- Bottom Lock Screen Bar -->
+          <div class="lock-bottom-bar">
+            <div class="quick-tool-btn" id="btn-flashlight" title="Flashlight">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M6 2h12v3l-3 4v13H9V9L6 5V2zm2 2v1.5l3 4v10.5h2V9.5l3-4V4H8z"/>
+              </svg>
+            </div>
+            <div class="swipe-hint">Swipe up or enter 0520 to unlock</div>
+            <div class="quick-tool-btn" id="btn-lock-camera" title="Camera">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <circle cx="12" cy="12" r="3.5"/>
+                <path d="M9 3L7.17 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-3.17L15 3H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SCREEN 2: HOME SCREEN                          -->
+      <!-- ============================================== -->
+      <section class="screen home-screen" id="home-screen">
+        <div class="wallpaper-bg home-wallpaper" id="home-wallpaper-bg"></div>
+
+        <!-- Incoming Push Notification Banner (2s after unlock) -->
+        <div class="notification-banner" id="notification-banner">
+          <div class="notif-header">
+            <div class="notif-app-info">
+              <span class="notif-app-icon">💌</span>
+              <span class="notif-app-name" id="notif-app-name">MESSAGES</span>
+            </div>
+            <span class="notif-time" id="notif-time">now</span>
+          </div>
+          <div class="notif-body">
+            <div class="notif-avatar">
+              <img id="notif-avatar-img" src="assets/avatar_anxin.jpg" alt="Anxinie">
+            </div>
+            <div class="notif-text">
+              <div class="notif-title" id="notif-title">Anxinie 🤍</div>
+              <div class="notif-message" id="notif-message">Hyung, are you almost done at the studio? I left your favorite peach tea in the fridge...</div>
+            </div>
+          </div>
+          <div class="notif-drag-bar"></div>
+        </div>
+
+        <div class="home-content">
+          <!-- Calendar / Idol Schedule Widget Bar -->
+          <div class="home-widget-area">
+            <div class="smart-widget glass-card">
+              <div class="widget-left">
+                <span class="widget-day" id="widget-day">FRI</span>
+                <span class="widget-date-num" id="widget-date-num">4</span>
+              </div>
+              <div class="widget-right">
+                <div class="widget-title">Duo Rehearsal with Anxinie 🤍</div>
+                <div class="widget-sub">500 Days Anniversary • Vocal Studio 3</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Apps Grid -->
+          <div class="app-grid" id="app-grid">
+            
+            <!-- App 1: Messages -->
+            <button class="app-icon-item" data-app="messages" id="app-btn-messages">
+              <div class="app-icon app-icon-messages">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                  <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+                </svg>
+                <span class="badge" id="messages-badge">1</span>
+              </div>
+              <span class="app-label">Messages</span>
+            </button>
+
+            <!-- App 2: Photos -->
+            <button class="app-icon-item" data-app="photos" id="app-btn-photos">
+              <div class="app-icon app-icon-photos">
+                <div class="photos-flower-symbol">
+                  <span class="petal p1"></span>
+                  <span class="petal p2"></span>
+                  <span class="petal p3"></span>
+                  <span class="petal p4"></span>
+                </div>
+              </div>
+              <span class="app-label">Photos</span>
+            </button>
+
+            <!-- App 3: Notes -->
+            <button class="app-icon-item" data-app="notes" id="app-btn-notes">
+              <div class="app-icon app-icon-notes">
+                <div class="notes-header-bar"></div>
+                <div class="notes-ruled-lines">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <span class="app-label">Notes</span>
+            </button>
+
+            <!-- App 4: Phone -->
+            <button class="app-icon-item" data-app="phone" id="app-btn-phone">
+              <div class="app-icon app-icon-phone">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+                <span class="badge" id="phone-badge">2</span>
+              </div>
+              <span class="app-label">Phone</span>
+            </button>
+
+            <!-- App 5: Settings / Story Info -->
+            <button class="app-icon-item" data-app="settings" id="app-btn-settings">
+              <div class="app-icon app-icon-settings">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                  <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                </svg>
+              </div>
+              <span class="app-label">Settings</span>
+            </button>
+
+          </div>
+
+          <!-- Bottom Dock -->
+          <div class="dock-container glass-card">
+            <button class="dock-icon-item" data-app="phone">
+              <div class="app-icon app-icon-phone"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+            </button>
+            <button class="dock-icon-item" data-app="messages">
+              <div class="app-icon app-icon-messages"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></div>
+            </button>
+            <button class="dock-icon-item" data-app="photos">
+              <div class="app-icon app-icon-photos"><div class="photos-flower-symbol mini"><span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span></div></div>
+            </button>
+            <button class="dock-icon-item" data-app="notes">
+              <div class="app-icon app-icon-notes"><div class="notes-ruled-lines mini"><span></span><span></span></div></div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================== -->
+      <!-- SCREEN 3: APP SCREENS CONTAINER                -->
+      <!-- ============================================== -->
+      <div class="app-screens-container" id="app-screens-container">
+        
+        <!-- -------------------------------------------- -->
+        <!-- APP: MESSAGES                                -->
+        <!-- -------------------------------------------- -->
+        <article class="app-window" id="app-window-messages">
+          <!-- View 1: Conversations List -->
+          <div class="app-view active" id="messages-list-view">
+            <header class="app-nav-bar">
+              <div class="nav-left">
+                <span class="nav-text-btn">Edit</span>
+              </div>
+              <h2 class="nav-title">Messages</h2>
+              <div class="nav-right">
+                <button class="nav-icon-btn" title="Compose">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                  </svg>
+                </button>
+              </div>
+            </header>
+
+            <div class="search-bar-wrapper">
+              <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search conversations" readonly>
+              </div>
+            </div>
+
+            <!-- Conversation Item List -->
+            <div class="conversation-list" id="conversation-list">
+              <!-- Dynamically populated from chats.json -->
+            </div>
+          </div>
+
+          <!-- View 2: Chat Thread Detail View -->
+          <div class="app-view" id="messages-thread-view">
+            <header class="thread-header">
+              <button class="thread-back-btn" id="thread-back-btn">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+                <span class="thread-back-label" id="thread-back-label">Messages</span>
+              </button>
+
+              <div class="thread-contact-info">
+                <img class="thread-avatar" id="thread-avatar-img" src="assets/avatar_anxin.jpg" alt="Avatar">
+                <div class="thread-name" id="thread-contact-name">Anxinie 🤍</div>
+                <div class="thread-status" id="thread-contact-status">Active now</div>
+              </div>
+
+              <div class="thread-actions">
+                <button class="thread-icon-btn" id="btn-call-from-chat" title="Voice Call">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                </button>
+              </div>
+            </header>
+
+            <!-- Chat Stream Scroll Area -->
+            <div class="chat-stream" id="chat-stream">
+              <!-- Message bubbles populated here -->
+              <div class="chat-bubbles-container" id="chat-bubbles-container"></div>
+
+              <!-- Typing Indicator -->
+              <div class="typing-indicator-row hidden" id="typing-indicator-row">
+                <img class="typing-avatar" id="typing-avatar" src="assets/avatar_anxin.jpg" alt="typing">
+                <div class="typing-bubble">
+                  <span class="typing-dot dot-1"></span>
+                  <span class="typing-dot dot-2"></span>
+                  <span class="typing-dot dot-3"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Story Replies (Visitor can tap to reply to Anxinie!) -->
+            <div class="quick-replies-bar hidden" id="quick-replies-bar">
+              <span class="quick-reply-pill" data-reply="On my way back right now, my Anxinie.">"On my way back right now, my Anxinie."</span>
+              <span class="quick-reply-pill" data-reply="Wait for me, I bought those egg tarts you were craving.">"Wait for me, I bought those egg tarts."</span>
+              <span class="quick-reply-pill" data-reply="Did you spray your throat lozenge before bed?">"Did you spray your throat lozenge?"</span>
+            </div>
+
+            <!-- Bottom Chat Input Bar -->
+            <footer class="chat-input-bar">
+              <button class="input-tool-btn" title="Add Photo">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+              </button>
+              <div class="chat-input-field">
+                <input type="text" id="chat-text-input" placeholder="iMessage" autocomplete="off">
+              </div>
+              <button class="chat-send-btn" id="chat-send-btn" title="Send">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+              </button>
+            </footer>
+          </div>
+        </article>
+
+        <!-- -------------------------------------------- -->
+        <!-- APP: PHOTOS                                  -->
+        <!-- -------------------------------------------- -->
+        <article class="app-window" id="app-window-photos">
+          <header class="app-nav-bar">
+            <h2 class="nav-title">Photos</h2>
+            <div class="nav-right">
+              <span class="nav-text-btn">Select</span>
+            </div>
+          </header>
+
+          <div class="photos-tabs-bar" id="photos-tabs-bar">
+            <button class="photos-tab active" data-tab="all">Library</button>
+            <button class="photos-tab" data-tab="favorites">Favorites</button>
+            <button class="photos-tab" data-tab="anxin">Anxinie 🤍</button>
+          </div>
+
+          <div class="photos-scroll-area">
+            <div class="photo-section-header">
+              <span class="section-title" id="photos-section-title">Memories & Moments</span>
+              <span class="section-sub" id="photos-count-label">54 Photos</span>
+            </div>
+
+            <!-- 3-Column Square Thumbnail Grid (Easily expandable!) -->
+            <div class="photos-grid" id="photos-grid">
+              <!-- Filled dynamically from config.json -->
+            </div>
+          </div>
+
+          <!-- Fullscreen Photo Viewer Modal -->
+          <div class="photo-viewer-modal hidden" id="photo-viewer-modal">
+            <header class="viewer-top-bar">
+              <button class="viewer-btn" id="btn-close-viewer" title="Close">✕</button>
+              <span class="viewer-counter" id="viewer-counter">1 of 12</span>
+              <button class="viewer-btn" id="btn-share-photo" title="Info">ⓘ</button>
+            </header>
+
+            <div class="viewer-main-image-wrap" id="viewer-image-wrap">
+              <button class="viewer-nav-btn prev-btn" id="btn-prev-photo" title="Previous">‹</button>
+              <img id="viewer-img" src="" alt="Fullscreen Photo">
+              <button class="viewer-nav-btn next-btn" id="btn-next-photo" title="Next">›</button>
+            </div>
+
+            <footer class="viewer-caption-card" id="viewer-caption-card">
+              <div class="caption-header">
+                <h4 class="caption-title" id="viewer-title">Photo Title</h4>
+                <div class="caption-meta">
+                  <span class="caption-date" id="viewer-date">Date</span>
+                  <span class="caption-location" id="viewer-location">Location</span>
+                </div>
+              </div>
+              <p class="caption-text" id="viewer-caption-text">Caption description...</p>
+            </footer>
+          </div>
+        </article>
+
+        <!-- -------------------------------------------- -->
+        <!-- APP: NOTES                                   -->
+        <!-- -------------------------------------------- -->
+        <article class="app-window" id="app-window-notes">
+          <!-- View 1: Notes List -->
+          <div class="app-view active" id="notes-list-view">
+            <header class="app-nav-bar notes-nav-bar">
+              <div class="nav-left">
+                <span class="notes-folder-tag">Folders</span>
+              </div>
+              <h2 class="nav-title">Notes</h2>
+              <div class="nav-right">
+                <span class="nav-text-btn notes-yellow">Edit</span>
+              </div>
+            </header>
+
+            <div class="notes-search-wrapper">
+              <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search notes" readonly>
+              </div>
+            </div>
+
+            <div class="notes-count-bar">
+              <span id="notes-total-count">4 Notes</span>
+            </div>
+
+            <!-- Notes List -->
+            <div class="notes-list" id="notes-list">
+              <!-- Populated from config.json -->
+            </div>
+          </div>
+
+          <!-- View 2: Note Reader / Detail -->
+          <div class="app-view" id="notes-detail-view">
+            <header class="app-nav-bar">
+              <button class="notes-back-btn" id="notes-back-btn">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                <span>Notes</span>
+              </button>
+              <div class="nav-right">
+                <span class="notes-lock-status" id="note-reader-lock-tag"></span>
+              </div>
+            </header>
+
+            <div class="note-reader-content">
+              <div class="note-reader-date" id="note-reader-date">Date</div>
+              <h1 class="note-reader-title" id="note-reader-title">Title</h1>
+              <div class="note-reader-body" id="note-reader-body">Content</div>
+            </div>
+          </div>
+
+          <!-- View 3: Locked Note PIN Modal -->
+          <div class="note-lock-overlay hidden" id="note-lock-overlay">
+            <div class="note-lock-card">
+              <div class="note-lock-icon">🔒</div>
+              <h3>This Note is Locked</h3>
+              <p class="note-lock-sub">Enter the 4-digit anniversary passcode</p>
+
+              <!-- 4 PIN Dots -->
+              <div class="note-pin-dots" id="note-pin-dots">
+                <span class="np-dot" data-idx="0"></span>
+                <span class="np-dot" data-idx="1"></span>
+                <span class="np-dot" data-idx="2"></span>
+                <span class="np-dot" data-idx="3"></span>
+              </div>
+
+              <!-- Note Keypad -->
+              <div class="note-keypad-grid" id="note-keypad-grid">
+                <button class="nkey" data-k="1">1</button>
+                <button class="nkey" data-k="2">2</button>
+                <button class="nkey" data-k="3">3</button>
+                <button class="nkey" data-k="4">4</button>
+                <button class="nkey" data-k="5">5</button>
+                <button class="nkey" data-k="6">6</button>
+                <button class="nkey" data-k="7">7</button>
+                <button class="nkey" data-k="8">8</button>
+                <button class="nkey" data-k="9">9</button>
+                <button class="nkey aux-k" id="btn-note-hint">Hint</button>
+                <button class="nkey" data-k="0">0</button>
+                <button class="nkey aux-k" id="btn-note-del">⌫</button>
+              </div>
+
+              <div class="note-hint-label hidden" id="note-hint-label">
+                Hint: Our rooftop anniversary date (1204: December 4th in Photos / Rings)!
+              </div>
+
+              <button class="note-cancel-btn" id="btn-cancel-note-unlock">Cancel</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- -------------------------------------------- -->
+        <!-- APP: PHONE / RECENT CALLS                    -->
+        <!-- -------------------------------------------- -->
+        <article class="app-window" id="app-window-phone">
+          <header class="app-nav-bar">
+            <h2 class="nav-title" id="phone-nav-title">Recents</h2>
+            <div class="nav-right">
+              <span class="nav-text-btn">Edit</span>
+            </div>
+          </header>
+
+          <!-- Tab Content: Recents -->
+          <div class="phone-tab-content active" id="phone-tab-recents">
+            <div class="recents-list" id="recents-list">
+              <!-- Call history list populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Tab Content: Contacts -->
+          <div class="phone-tab-content" id="phone-tab-contacts">
+            <div class="contacts-list" id="contacts-list">
+              <!-- Contacts populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Tab Content: Voicemail -->
+          <div class="phone-tab-content" id="phone-tab-voicemail">
+            <div class="voicemail-card glass-card">
+              <div class="vm-top">
+                <span class="vm-badge" style="color: #ff6b8b; background: rgba(255, 107, 139, 0.15); border-color: rgba(255, 107, 139, 0.3);">SWEETHEART</span>
+                <span class="vm-time">23:43 (5 mins ago)</span>
+              </div>
+              <h3 class="vm-sender">Anxinie 🤍</h3>
+              <p class="vm-duration">Audio message • 0:28</p>
+              
+              <!-- Voice waveform & playback button -->
+              <div class="vm-player">
+                <button class="vm-play-btn" id="btn-play-voicemail">▶</button>
+                <div class="vm-waveform" id="vm-waveform">
+                  <span class="wbar"></span><span class="wbar"></span><span class="wbar"></span>
+                  <span class="wbar"></span><span class="wbar"></span><span class="wbar"></span>
+                  <span class="wbar"></span><span class="wbar"></span><span class="wbar"></span>
+                  <span class="wbar"></span><span class="wbar"></span><span class="wbar"></span>
+                </div>
+              </div>
+
+              <div class="vm-transcript-box">
+                <div class="vm-transcript-label">Transcript:</div>
+                <p class="vm-transcript-text" id="vm-transcript-text">
+                  "Hyung... you didn't answer, so you must still be in the recording booth polishing the vocals. It's almost midnight. Come home safely, okay? I left the warm light on for you in our room... love you."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content: Keypad -->
+          <div class="phone-tab-content" id="phone-tab-keypad">
+            <div class="phone-dialer-wrap">
+              <div class="dialer-display" id="dialer-display">&nbsp;</div>
+              <div class="dialer-grid" id="dialer-grid">
+                <button class="dial-btn" data-val="1">1</button>
+                <button class="dial-btn" data-val="2">2<span>ABC</span></button>
+                <button class="dial-btn" data-val="3">3<span>DEF</span></button>
+                <button class="dial-btn" data-val="4">4<span>GHI</span></button>
+                <button class="dial-btn" data-val="5">5<span>JKL</span></button>
+                <button class="dial-btn" data-val="6">6<span>MNO</span></button>
+                <button class="dial-btn" data-val="7">7<span>PQRS</span></button>
+                <button class="dial-btn" data-val="8">8<span>TUV</span></button>
+                <button class="dial-btn" data-val="9">9<span>WXYZ</span></button>
+                <button class="dial-btn" data-val="*">*</button>
+                <button class="dial-btn" data-val="0">0<span>+</span></button>
+                <button class="dial-btn" data-val="#">#</button>
+              </div>
+              <div class="dialer-call-row">
+                <button class="call-action-btn" id="btn-dialer-call">📞</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Phone App Navigation Bar -->
+          <nav class="phone-bottom-nav" id="phone-bottom-nav">
+            <button class="phone-tab-btn active" data-tab="recents">
+              <span class="tab-icon">🕒</span>
+              <span class="tab-name">Recents</span>
+            </button>
+            <button class="phone-tab-btn" data-tab="contacts">
+              <span class="tab-icon">👤</span>
+              <span class="tab-name">Contacts</span>
+            </button>
+            <button class="phone-tab-btn" data-tab="keypad">
+              <span class="tab-icon">🔢</span>
+              <span class="tab-name">Keypad</span>
+            </button>
+            <button class="phone-tab-btn" data-tab="voicemail">
+              <span class="tab-icon">📼</span>
+              <span class="tab-name">Voicemail</span>
+            </button>
+          </nav>
+        </article>
+
+        <!-- -------------------------------------------- -->
+        <!-- APP: SETTINGS / IDOL PROFILE                -->
+        <!-- -------------------------------------------- -->
+        <article class="app-window" id="app-window-settings">
+          <header class="app-nav-bar">
+            <h2 class="nav-title">Settings</h2>
+          </header>
+          <div class="settings-scroll-area">
+            <div class="settings-profile-card">
+              <img src="assets/avatar_sangwon.jpg" alt="Sangwon" class="settings-avatar">
+              <div class="settings-user-info">
+                <h3>Lee Sangwon (이상원)</h3>
+                <p>ALD1 Official Account • sangwon@ald1-ent.kr</p>
+                <span class="status-pill warning" style="color: #ff6b8b; background: rgba(255, 107, 139, 0.15); border-color: rgba(255, 107, 139, 0.3);">23 y/o • Main Dancer</span>
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-row">
+                <span class="row-label">Device Name</span>
+                <span class="row-value">Sangwon's iPhone 16 Pro</span>
+              </div>
+              <div class="settings-row">
+                <span class="row-label">Group / Agency</span>
+                <span class="row-value">ALD1 (Starline Ent.)</span>
+              </div>
+              <div class="settings-row">
+                <span class="row-label">Cellular Network</span>
+                <span class="row-value">SK Telecom 5G</span>
+              </div>
+              <div class="settings-row">
+                <span class="row-label">Shared Album</span>
+                <span class="row-value">Anxinie 🤍 (12 items)</span>
+              </div>
+            </div>
+
+            <div class="settings-group">
+              <div class="settings-row clickable" id="btn-quick-lock-phone">
+                <span class="row-label text-danger">🔒 Lock Phone Now</span>
+                <span class="row-arrow">›</span>
+              </div>
+              <div class="settings-row clickable" id="btn-reset-story">
+                <span class="row-label text-warning">🔄 Restart Snooping Story</span>
+                <span class="row-arrow">›</span>
+              </div>
+            </div>
+
+            <div class="story-notes-card">
+              <h4>💖 Romance & Idol Clues</h4>
+              <p>You are snooping on Lee Sangwon's phone (23). He is secretly dating bandmate Zhou Anxin / Anxinie (20) in ALD1, while his older sister dotes on both of them.</p>
+              <ul>
+                <li><strong>Lock Screen PIN:</strong> <code>0520</code> (我爱你 / I love you)</li>
+                <li><strong>Secret 500-Day Diary PIN:</strong> <code>1204</code> (December 4th rooftop anniversary)</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ============================================== -->
+      <!-- GLOBAL HOME INDICATOR (SWIPE-UP BAR)           -->
+      <!-- ============================================== -->
+      <div class="home-indicator-zone" id="home-indicator-zone" title="Swipe or click to go Home">
+        <div class="home-indicator-bar" id="home-indicator-bar"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

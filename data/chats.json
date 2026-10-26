@@ -1,0 +1,245 @@
+[
+  {
+    "id": "anxin",
+    "name": "Anxinie 🤍",
+    "avatar": "assets/avatar_anxin.jpg",
+    "online": true,
+    "status": "Active now",
+    "initialUnread": 1,
+    "messages": [
+      {
+        "id": "ax1",
+        "sender": "anxin",
+        "text": "Hyung, did you see the fancam from today's dry run?",
+        "time": "22:15",
+        "status": "read"
+      },
+      {
+        "id": "ax2",
+        "sender": "sangwon",
+        "text": "I did. Why? You were smiling during the chorus transition.",
+        "time": "22:18",
+        "status": "read"
+      },
+      {
+        "id": "ax3",
+        "sender": "anxin",
+        "text": "Because you squeezed my fingers right before the beat drop! My heart almost stopped on live broadcast 🙈",
+        "time": "22:20",
+        "status": "read"
+      },
+      {
+        "id": "ax4",
+        "sender": "sangwon",
+        "text": "You were looking nervous, Anxinie. I told you I'd always be right there next to you.",
+        "time": "22:22",
+        "status": "read"
+      },
+      {
+        "id": "ax5",
+        "sender": "anxin",
+        "text": "I know... hearing your voice through my in-ear monitor was the only reason I didn't mess up the high note.",
+        "time": "22:25",
+        "status": "read"
+      },
+      {
+        "id": "ax6",
+        "sender": "anxin",
+        "text": "Also... happy 500 days, Sangwon-ah. Thank you for loving me since our trainee days.",
+        "time": "22:30",
+        "status": "read"
+      },
+      {
+        "id": "ax7",
+        "sender": "sangwon",
+        "text": "Happy 500 days, my Anxinie. You have no idea how much I love you. Wearing our ring under my stage gloves felt so special today.",
+        "time": "22:34",
+        "status": "read"
+      },
+      {
+        "id": "ax_photo1",
+        "sender": "anxin",
+        "text": "Hyung look what I just found in my gallery from that day on the couch in the small studio room 🙈",
+        "image": "assets/photos/photo_55.jpg",
+        "time": "22:36",
+        "status": "read"
+      },
+      {
+        "id": "ax_photo2",
+        "sender": "anxin",
+        "text": "You looked so cute looking up with your messy bangs while we were playing games together 💕",
+        "image": "assets/photos/photo_56.jpg",
+        "time": "22:37",
+        "status": "read"
+      },
+      {
+        "id": "ax_sangwon_rep",
+        "sender": "sangwon",
+        "text": "Yah Zhou Anxin... when did you take the second one? My hair was completely wild haha. I love that memory so much though.",
+        "time": "22:38",
+        "status": "read"
+      },
+      {
+        "id": "ax8",
+        "sender": "anxin",
+        "text": "Don't stay too late at the studio tonight. You've been practicing non-stop for 8 hours.",
+        "time": "22:40",
+        "status": "read"
+      },
+      {
+        "id": "ax9",
+        "sender": "sangwon",
+        "text": "Just recording the final harmony guide for our duo track. I'll be home soon.",
+        "time": "22:45",
+        "status": "read"
+      }
+    ],
+    "incomingQueue": [
+      {
+        "id": "ax10",
+        "sender": "anxin",
+        "text": "Hyung, are you almost done at the studio? I left your favorite peach tea in the fridge...",
+        "time": "23:48",
+        "delay": 1500
+      },
+      {
+        "id": "ax11",
+        "sender": "anxin",
+        "text": "I warmed up the beef ribs Noona sent, and I left your favorite oversized hoodie on your side of the bed 🤍 Don't push yourself too hard tonight, my Sangwon.",
+        "time": "23:48",
+        "delay": 3500
+      }
+    ]
+  },
+  {
+    "id": "noona",
+    "name": "Jiwoo Noona 💕",
+    "avatar": "assets/avatar_noona.jpg",
+    "online": false,
+    "status": "Last seen 10m ago",
+    "initialUnread": 0,
+    "messages": [
+      {
+        "id": "n1",
+        "sender": "noona",
+        "text": "Sangwon-ah!! Did the courier box arrive at your agency front desk today? 🎁",
+        "time": "18:30",
+        "status": "read"
+      },
+      {
+        "id": "n2",
+        "sender": "sangwon",
+        "text": "Yes Noona! The security guard brought it up to our dorm. Thank you so much.",
+        "time": "19:10",
+        "status": "read"
+      },
+      {
+        "id": "n3",
+        "sender": "noona",
+        "text": "Mom marinated your favorite braised galbi for three days! And I bought the most expensive six-year red ginseng tonic for your throat.",
+        "time": "19:12",
+        "status": "read"
+      },
+      {
+        "id": "n4",
+        "sender": "noona",
+        "text": "Make SURE you give half of everything to Anxinie! He looked so slender at the airport press conference last week, Noona worries he doesn't eat enough carbs in Korea!",
+        "time": "19:15",
+        "status": "read"
+      },
+      {
+        "id": "n5",
+        "sender": "sangwon",
+        "text": "Haha don't worry Noona, he already unpacked the galbi and his eyes lit up. He says thank you and sends his love.",
+        "time": "19:20",
+        "status": "read"
+      },
+      {
+        "id": "n6",
+        "sender": "noona",
+        "text": "Aww my sweet Anxinie 🥰 Tell him Noona will take both of you out for authentic Chongqing hotpot after your tour finishes!",
+        "time": "19:25",
+        "status": "read"
+      },
+      {
+        "id": "n7",
+        "sender": "noona",
+        "text": "P.S. I watched the music show fancam... the way you looked at him during the bridge, you silly boy 💕 Be careful around the dispatch reporters! Noona is always cheering for you two.",
+        "time": "19:28",
+        "status": "read"
+      }
+    ],
+    "incomingQueue": []
+  },
+  {
+    "id": "manager",
+    "name": "Manager Park",
+    "avatar": "assets/avatar_manager.jpg",
+    "online": true,
+    "status": "ALD1 Management",
+    "initialUnread": 0,
+    "messages": [
+      {
+        "id": "m1",
+        "sender": "manager",
+        "text": "Notice to ALD1: Tomorrow's Music Bank pre-recording call time moved to 05:30 AM at KBS Hall.",
+        "time": "19:30",
+        "status": "read"
+      },
+      {
+        "id": "m2",
+        "sender": "manager",
+        "text": "Sangwon, your custom in-ear monitors arrived from the audio technician. They're tuned for your duo stage with Anxin.",
+        "time": "19:32",
+        "status": "read"
+      },
+      {
+        "id": "m3",
+        "sender": "manager",
+        "text": "Make sure everyone goes to sleep before 1 AM. No ordering late-night spicy tteokbokki!",
+        "time": "19:35",
+        "status": "read"
+      }
+    ],
+    "incomingQueue": []
+  },
+  {
+    "id": "ald1_dorm",
+    "name": "ALD1 Chaos Dorm 🎤",
+    "avatar": "assets/avatar_ald1.jpg",
+    "online": false,
+    "status": "Group (6 members)",
+    "initialUnread": 0,
+    "messages": [
+      {
+        "id": "g1",
+        "sender": "minho",
+        "text": "Guys who put the peach tea on the top shelf of the dorm fridge?",
+        "time": "21:40",
+        "status": "read"
+      },
+      {
+        "id": "g2",
+        "sender": "haruto",
+        "text": "DO NOT TOUCH IT Minho hyung!! Anxin bought that specially for Sangwon hyung lmaooo",
+        "time": "21:42",
+        "status": "read"
+      },
+      {
+        "id": "g3",
+        "sender": "taehyun",
+        "text": "Yeah if you drink Sangwon's peach tea, Anxin will chase you with the vacuum cleaner again 💀",
+        "time": "21:45",
+        "status": "read"
+      },
+      {
+        "id": "g4",
+        "sender": "anxin",
+        "text": "I heard that! Hands off the peach tea and Noona's beef ribs, they're for Sangwon hyung after vocal recording 😤",
+        "time": "21:50",
+        "status": "read"
+      }
+    ],
+    "incomingQueue": []
+  }
+]
