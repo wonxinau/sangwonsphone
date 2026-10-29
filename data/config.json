@@ -421,14 +421,6 @@
   "notes": [
     {
       "id": "note_1",
-      "title": "ALD1 World Tour - Rehearsal & Vocal Setlist",
-      "date": "Dec 03, 2026",
-      "snippet": "Opening: Track 01 'Supernova' -> Duo Center Unit with Anxinie...",
-      "locked": false,
-      "content": "ALD1 WORLD TOUR 2026-2027 REHEARSAL CHECKLIST\n=============================================\n1. Opening Stage: 'Supernova' (Formation 3 -> 1)\n2. Title Track: 'Echoes of Light' (Live vocal mic gain +2dB)\n3. Duo Stage (Sangwon & Anxin):\n   - Rehearse the hand-reach transition at bridge 02:45\n   - Check in-ear monitor mix (pan Anxin's vocal to my left ear)\n   - Don't linger holding hands too long on the revolving riser—Manager Park warned us fans were screaming last soundcheck.\n4. Encore: Acoustic medley with lightstick wave."
-    },
-    {
-      "id": "note_2",
       "title": "Little Things to Remember About Anxinie 🤍",
       "date": "Nov 18, 2026",
       "snippet": "Peach iced tea, hates cucumbers, gets homesick when winter begins...",
@@ -436,22 +428,14 @@
       "content": "THINGS ANXINIE LOVES & NEEDS:\n- Loves peach iced tea (50% sugar, less ice).\n- Hates cucumbers with a passion (pick them out of kimbap for him).\n- When he misses Chongqing or his family, make tomato egg noodles late at night.\n- Always gets cold hands after music show dry runs—keep hand warmers in my bag.\n- Loves sleeping on the left side of our bed facing the window.\n- Needs gentle hugs when choreo practice gets overwhelming.\n- Tells me 'Wo ai ni' in Chinese whenever he thinks I'm asleep."
     },
     {
-      "id": "note_3",
-      "title": "Private Diary - For Anxinie (500 Days)",
+      "id": "note_2",
+      "title": "Private Diary - For Anxinie",
       "date": "Dec 04, 2026",
       "snippet": "LOCKED NOTE • Our secret rooftop confession & promise.",
       "locked": true,
-      "pin": "1204",
-      "pinHint": "Hint: Our anniversary date (1204 = December 4th on the rooftop ring)!",
-      "content": "TO MY ANXINIE (500 DAYS TOGETHER)\n===================================\nDecember 4th.\n\nTwo years ago on that freezing dorm rooftop, when you handed me your scarf and confessed that you liked me, I was terrified. We were rookies about to debut in ALD1, and the entire world expected us to be flawless, untouchable idols.\n\nEvery day since then, keeping our love hidden has been our sweetest, most precious secret. When we stand together on stadium stages before tens of thousands of fans, hearing you harmonize next to me gives me courage I never knew I had.\n\nI promise you, Anxinie:\nNo matter how chaotic this industry gets, no matter how many schedules they throw at us, I will always be your home. When the cameras turn off and the lights go down, I am just Sangwon, and you are my whole heart.\n\nHappy 500 days, my love.\n\n— Sangwon (상원)"
-    },
-    {
-      "id": "note_4",
-      "title": "Noona's Care Package & Vitamin Schedule",
-      "date": "Nov 24, 2026",
-      "snippet": "Jiwoo Noona sent 4 boxes of ginseng and mom's homemade side dishes...",
-      "locked": false,
-      "content": "CARE PACKAGE FROM NOONA:\n[✓] 4x Boxes Korean Red Ginseng Royal Tonic (Take 1 pouch daily, give 2 boxes to Anxin!)\n[✓] Mom's Braised Galbi-jjim (Heat for 4 mins)\n[✓] Organic propolis throat spray for concert vocal protection\n[✓] Calming sheet masks for Anxinie's skin routine\n\nNoona's Note:\n'Sangwon-ah, your group is reaching #1 everywhere, but don't forget to rest. Eat every single bite of this meat! Give Anxinie a big hug from me and tell him he did great on yesterday's radio show! 💕'"
+      "pin": "1221",
+      "pinHint": "Hint: Our anniversary date (1221)!",
+      "content": "TO MY ANXINIE \n===================================\nDecember 21st.\n\nTwo years ago on that studio choom schedule when you asked for my number and confessed that you liked me, I was terrified. We were rookies about to debut and the entire world expected different things from us.\n\nEvery day since then, keeping our love hidden has been our sweetest, most precious secret. When we stand together on stages before tens of thousands of fans, hearing you harmonize next to me gives me courage I never knew I had.\n\nI promise you, Anxinie:\nNo matter how chaotic this industry gets, no matter how many schedules they throw at us, I will always be your home and you are my whole heart.\n\nHappy 500 days, my love.\n\n— 상원"
     }
   ],
   "contacts": [
@@ -462,11 +446,11 @@
       "phone": "+82 10-5200-1204",
       "avatar": "assets/avatar_anxin.jpg",
       "status": "Active now",
-      "relation": "Lover / ALD1 Vocal"
+      "relation": "Lover"
     },
     {
       "id": "noona",
-      "name": "Jiwoo Noona 💕",
+      "name": " Noona 💕",
       "fullName": "Lee Jiwoo (이지우)",
       "phone": "+82 10-8821-4902",
       "avatar": "assets/avatar_noona.jpg",
@@ -486,7 +470,7 @@
       "id": "ald1_dorm",
       "name": "ALD1 Chaos Dorm 🎤",
       "fullName": "ALD1 Members (6)",
-      "phone": "Group (6 members)",
+      "phone": "Group (8 members)",
       "avatar": "assets/avatar_ald1.jpg",
       "status": "4 new messages",
       "relation": "Group Chat"
@@ -501,7 +485,7 @@
       "phone": "+82 10-5200-1204"
     },
     {
-      "name": "Jiwoo Noona 💕",
+      "name": " Noona 💕",
       "type": "incoming",
       "time": "21:15",
       "duration": "14m 20s",
@@ -526,6 +510,6 @@
     "sender": "Anxinie 🤍",
     "time": "23:43 (5 minutes ago)",
     "duration": "0:28",
-    "transcript": "\"Hyung... you didn't answer, so you must still be in the recording booth polishing the vocals. It's almost midnight. Come home safely, okay? I left the warm light on for you in our room... love you.\""
+    "transcript": "\"Hyung... you didn't answer, so you must still be in the recording booth. It's almost midnight. Come home safely, okay? I left the warm light on for you in our room... love you.\""
   }
 }
