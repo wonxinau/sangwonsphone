@@ -5,7 +5,7 @@
     "age": 23,
     "group": "ALD1",
     "position": "Main Dancer / Vocalist",
-    "deviceModel": "Sangwon's iPhone 16 Pro",
+    "deviceModel": "Sangwon's iPhone 18 Pro",
     "clockTime": "23:48",
     "clockDate": "Friday, December 4",
     "carrier": "SKT 5G",
@@ -29,8 +29,8 @@
       "id": "photo_1",
       "url": "assets/photos/photo_1.jpg",
       "thumb": "assets/photos/photo_1.jpg",
-      "favorite": true,
-      "category": "anxin"
+      "favorite": false,
+      "category": "candid"
     },
     {
       "id": "photo_2",
@@ -43,21 +43,21 @@
       "id": "photo_3",
       "url": "assets/photos/photo_3.jpg",
       "thumb": "assets/photos/photo_3.jpg",
-      "favorite": true,
-      "category": "anxin"
+      "favorite": false,
+      "category": "candid"
     },
     {
       "id": "photo_4",
       "url": "assets/photos/photo_4.jpg",
       "thumb": "assets/photos/photo_4.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "candid"
     },
     {
       "id": "photo_5",
       "url": "assets/photos/photo_5.jpg",
       "thumb": "assets/photos/photo_5.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "anxin"
     },
     {
@@ -92,7 +92,7 @@
       "id": "photo_10",
       "url": "assets/photos/photo_10.jpg",
       "thumb": "assets/photos/photo_10.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "dorm"
     },
     {
@@ -120,7 +120,7 @@
       "id": "photo_14",
       "url": "assets/photos/photo_14.jpg",
       "thumb": "assets/photos/photo_14.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "stage"
     },
     {
@@ -148,14 +148,14 @@
       "id": "photo_18",
       "url": "assets/photos/photo_18.jpg",
       "thumb": "assets/photos/photo_18.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "candid"
     },
     {
       "id": "photo_19",
       "url": "assets/photos/photo_19.jpg",
       "thumb": "assets/photos/photo_19.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "candid"
     },
     {
@@ -169,7 +169,7 @@
       "id": "photo_21",
       "url": "assets/photos/photo_21.jpg",
       "thumb": "assets/photos/photo_21.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "candid"
     },
     {
@@ -197,7 +197,7 @@
       "id": "photo_25",
       "url": "assets/photos/photo_25.jpg",
       "thumb": "assets/photos/photo_25.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "candid"
     },
     {
@@ -211,14 +211,14 @@
       "id": "photo_27",
       "url": "assets/photos/photo_27.jpg",
       "thumb": "assets/photos/photo_27.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "candid"
     },
     {
       "id": "photo_28",
       "url": "assets/photos/photo_28.jpg",
       "thumb": "assets/photos/photo_28.jpg",
-      "favorite": true,
+      "favorite": false,
       "category": "dorm"
     },
     {
@@ -468,7 +468,7 @@
     },
     {
       "id": "ald1_dorm",
-      "name": "ALD1 Chaos Dorm 🎤",
+      "name": "Uldiwon 🎤",
       "fullName": "ALD1 Members (6)",
       "phone": "Group (8 members)",
       "avatar": "assets/avatar_ald1.jpg",

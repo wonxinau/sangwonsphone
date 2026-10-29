@@ -18,10 +18,7 @@
   <!-- Desktop Ambient Canvas & Outer Controls -->
   <div class="desktop-backdrop">
     <div class="desktop-header">
-      <div class="story-tag">ALD1 IDOL ROMANCE</div>
-      <h1>Snooping on Sangwon's Phone</h1>
-      <p class="story-desc">Discover the secret idol romance between Sangwon (23) & Anxinie (20) of ALD1, plus sweet
-        doting messages from his older sister!</p>
+
       <div class="desktop-actions">
         <button id="btn-desktop-hint" class="action-btn" title="Autofill Lock PIN">Autofill PIN (0520)</button>
         <button id="btn-desktop-lock" class="action-btn" title="Lock the device">Lock Device</button>
@@ -40,6 +37,7 @@
 
     <!-- Phone Screen Container (9:19.5 aspect ratio) -->
     <div class="phone-screen" id="phone-screen">
+      <div class="wallpaper-toast hidden" id="phone-toast"></div>
 
       <!-- Top Dynamic Island & Speaker -->
       <div class="dynamic-island-wrapper">
@@ -200,6 +198,7 @@
       <!-- ============================================== -->
       <section class="screen home-screen" id="home-screen">
         <div class="wallpaper-bg home-wallpaper" id="home-wallpaper-bg"></div>
+        <div class="home-vignette"></div>
 
         <!-- Incoming Push Notification Banner (2s after unlock) -->
         <div class="notification-banner" id="notification-banner">
@@ -232,8 +231,7 @@
                 <span class="widget-date-num" id="widget-date-num">4</span>
               </div>
               <div class="widget-right">
-                <div class="widget-title">Duo Rehearsal with Anxinie 🤍</div>
-                <div class="widget-sub">500 Days Anniversary • Vocal Studio 3</div>
+                <div class="widget-title"> Elle magazine with with Anxinie 🤍</div>
               </div>
             </div>
           </div>
@@ -472,7 +470,10 @@
             <header class="viewer-top-bar">
               <button class="viewer-btn" id="btn-close-viewer" title="Close">✕</button>
               <span class="viewer-counter" id="viewer-counter">1 of 12</span>
-              <button class="viewer-btn" id="btn-share-photo" title="Info">ⓘ</button>
+              <div class="viewer-top-actions">
+                <button class="viewer-btn" id="btn-share-photo" title="Info" style="display: none;">ⓘ</button>
+                <button class="viewer-btn" id="btn-set-wallpaper" title="Set as Wallpaper">🖼️</button>
+              </div>
             </header>
 
             <div class="viewer-main-image-wrap" id="viewer-image-wrap">
@@ -491,6 +492,16 @@
               </div>
               <p class="caption-text" id="viewer-caption-text" style="display: none;"></p>
             </footer>
+
+            <!-- Wallpaper Action Sheet -->
+            <div class="wallpaper-action-sheet-overlay hidden" id="wallpaper-action-sheet">
+              <div class="wallpaper-action-card">
+                <button class="wallpaper-action-btn" id="btn-wall-action-lock">Set Lock Screen Wallpaper</button>
+                <button class="wallpaper-action-btn" id="btn-wall-action-home">Set Home Screen Wallpaper</button>
+                <button class="wallpaper-action-btn" id="btn-wall-action-both">Set Both Screens</button>
+              </div>
+              <button class="wallpaper-cancel-btn" id="btn-wall-action-cancel">Cancel</button>
+            </div>
           </div>
         </article>
 
@@ -712,11 +723,11 @@
             <div class="settings-group">
               <div class="settings-row">
                 <span class="row-label">Device Name</span>
-                <span class="row-value">Sangwon's iPhone 16 Pro</span>
+                <span class="row-value">Sangwon's iPhone 18 Pro</span>
               </div>
               <div class="settings-row">
                 <span class="row-label">Group / Agency</span>
-                <span class="row-value">ALD1 (Starline Ent.)</span>
+                <span class="row-value">ALD1 (Wakeone Ent.)</span>
               </div>
               <div class="settings-row">
                 <span class="row-label">Cellular Network</span>
@@ -739,26 +750,21 @@
               </div>
             </div>
 
-            <div class="story-notes-card">
-              <h4>💖 Romance & Idol Clues</h4>
-              <p>You are snooping on Lee Sangwon's phone (23). He is secretly dating bandmate Zhou Anxin / Anxinie (20)
-                in ALD1, while his older sister dotes on both of them.</p>
-              <ul>
-                <li><strong>Lock Screen PIN:</strong> <code>0520</code> (我爱你 / I love you)</li>
-                <li><strong>Secret 500-Day Diary PIN:</strong> <code>1204</code> (December 4th rooftop anniversary)</li>
-              </ul>
-            </div>
+
+
+            </ul>
           </div>
-        </article>
-
       </div>
+      </article>
 
-      <!-- ============================================== -->
-      <!-- GLOBAL HOME INDICATOR (SWIPE-UP BAR)           -->
-      <!-- ============================================== -->
-      <div class="home-indicator-zone" id="home-indicator-zone" title="Swipe or click to go Home">
-        <div class="home-indicator-bar" id="home-indicator-bar"></div>
-      </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- GLOBAL HOME INDICATOR (SWIPE-UP BAR)           -->
+    <!-- ============================================== -->
+    <div class="home-indicator-zone" id="home-indicator-zone" title="Swipe or click to go Home">
+      <div class="home-indicator-bar" id="home-indicator-bar"></div>
+    </div>
 
     </div>
   </main>

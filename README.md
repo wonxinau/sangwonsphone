@@ -30,7 +30,7 @@ Visitors "snoop" on Sangwon's phone, discovering late-night practice room texts,
 3. **Messages App**:
    - **Anxinie 🤍**: Private romantic messages with typing indicator animation (`"Anxinie is typing..."`), follow-up texts, and quick-reply pills allowing you to reply back.
    - **Jiwoo Noona 💕**: Doting sister messages sending homemade galbi, red ginseng, and teasing them about airport fancams.
-   - **ALD1 Chaos Dorm 🎤**: Group chat banter about peach tea and practice room antics.
+   - **Uldiwon 🎤**: Group chat banter about peach tea and practice room antics.
 4. **Photos App (56 Romantic Memories)**:
    - Dynamic tab filtering: **Library** (all 56 photos), **Favorites**, and **Anxinie 🤍**.
    - 3-column square thumbnail grid with authentic idol romance memories:

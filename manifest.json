@@ -1,7 +1,6 @@
 {
   "name": "Sangwon's Phone",
   "short_name": "Sangwon",
-  "description": "Interactive romance phone web app - discover Sangwon & Anxinie's secret idol love.",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",

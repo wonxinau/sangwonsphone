@@ -202,6 +202,18 @@
       document.getElementById('lock-hint-text').textContent = owner.pinHint;
     }
 
+    const savedLockWall = localStorage.getItem('sangwon_phone_lock_wallpaper') || owner.wallpaper;
+    if (savedLockWall) {
+      const lockBg = document.getElementById('lock-wallpaper-bg');
+      if (lockBg) lockBg.style.backgroundImage = `url('${savedLockWall}')`;
+    }
+
+    const savedHomeWall = localStorage.getItem('sangwon_phone_home_wallpaper') || owner.homeWallpaper;
+    if (savedHomeWall) {
+      const homeBg = document.getElementById('home-wallpaper-bg');
+      if (homeBg) homeBg.style.backgroundImage = `url('${savedHomeWall}')`;
+    }
+
     if (notification) {
       document.getElementById('notif-app-name').textContent = notification.appName || 'MESSAGES';
       document.getElementById('notif-title').textContent = notification.sender || 'Anxinie 🤍';
@@ -637,6 +649,72 @@
         if (card) {
           card.classList.toggle('hidden-caption');
         }
+      });
+    }
+
+    // Set as Wallpaper button & Action Sheet
+    const setWallBtn = document.getElementById('btn-set-wallpaper');
+    const wallSheet = document.getElementById('wallpaper-action-sheet');
+    if (setWallBtn && wallSheet) {
+      setWallBtn.addEventListener('click', () => {
+        SoundFx.tap();
+        wallSheet.classList.remove('hidden');
+      });
+
+      document.getElementById('btn-wall-action-cancel')?.addEventListener('click', () => {
+        SoundFx.tap();
+        wallSheet.classList.add('hidden');
+      });
+
+      wallSheet.addEventListener('click', (e) => {
+        if (e.target === wallSheet) {
+          wallSheet.classList.add('hidden');
+        }
+      });
+
+      const getCurrentPhotoUrl = () => {
+        const list = state.currentViewerList || getFilteredPhotos();
+        const photo = list[state.currentViewerIndex];
+        return photo?.url || photo?.thumb || '';
+      };
+
+      document.getElementById('btn-wall-action-lock')?.addEventListener('click', () => {
+        SoundFx.tap();
+        const url = getCurrentPhotoUrl();
+        if (url) {
+          const lockBg = document.getElementById('lock-wallpaper-bg');
+          if (lockBg) lockBg.style.backgroundImage = `url('${url}')`;
+          localStorage.setItem('sangwon_phone_lock_wallpaper', url);
+          showToast('Lock Screen Wallpaper updated! 🤍');
+        }
+        wallSheet.classList.add('hidden');
+      });
+
+      document.getElementById('btn-wall-action-home')?.addEventListener('click', () => {
+        SoundFx.tap();
+        const url = getCurrentPhotoUrl();
+        if (url) {
+          const homeBg = document.getElementById('home-wallpaper-bg');
+          if (homeBg) homeBg.style.backgroundImage = `url('${url}')`;
+          localStorage.setItem('sangwon_phone_home_wallpaper', url);
+          showToast('Home Screen Wallpaper updated! 🤍');
+        }
+        wallSheet.classList.add('hidden');
+      });
+
+      document.getElementById('btn-wall-action-both')?.addEventListener('click', () => {
+        SoundFx.tap();
+        const url = getCurrentPhotoUrl();
+        if (url) {
+          const lockBg = document.getElementById('lock-wallpaper-bg');
+          if (lockBg) lockBg.style.backgroundImage = `url('${url}')`;
+          const homeBg = document.getElementById('home-wallpaper-bg');
+          if (homeBg) homeBg.style.backgroundImage = `url('${url}')`;
+          localStorage.setItem('sangwon_phone_lock_wallpaper', url);
+          localStorage.setItem('sangwon_phone_home_wallpaper', url);
+          showToast('Both Wallpapers updated! 🤍');
+        }
+        wallSheet.classList.add('hidden');
       });
     }
 
@@ -1147,6 +1225,18 @@
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
+  }
+
+  let toastTimeout = null;
+  function showToast(message) {
+    const toast = document.getElementById('phone-toast');
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.remove('hidden');
+    if (toastTimeout) clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 2400);
   }
 
   function registerServiceWorker() {
