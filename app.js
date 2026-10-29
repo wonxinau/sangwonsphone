@@ -730,14 +730,29 @@
 
     document.getElementById('viewer-img').src = photo.url;
     document.getElementById('viewer-counter').textContent = `${idx + 1} of ${photosList.length}`;
-    document.getElementById('viewer-title').textContent = photo.title;
-    document.getElementById('viewer-date').textContent = photo.date;
-    document.getElementById('viewer-location').textContent = photo.location ? `📍 ${photo.location}` : '';
-    document.getElementById('viewer-caption-text').textContent = photo.caption;
-
+    const hasInfo = Boolean(photo.title || photo.date || photo.location || photo.caption);
     const card = document.getElementById('viewer-caption-card');
+    const infoBtn = document.getElementById('btn-share-photo');
+
     if (card) {
-      card.classList.remove('hidden-caption');
+      if (hasInfo) {
+        document.getElementById('viewer-title').textContent = photo.title || '';
+        document.getElementById('viewer-date').textContent = photo.date || '';
+        document.getElementById('viewer-location').textContent = photo.location ? `📍 ${photo.location}` : '';
+        const captionEl = document.getElementById('viewer-caption-text');
+        if (captionEl) {
+          captionEl.textContent = photo.caption || '';
+          captionEl.style.display = photo.caption ? '' : 'none';
+        }
+        card.style.display = '';
+        card.classList.remove('hidden-caption');
+      } else {
+        card.style.display = 'none';
+      }
+    }
+
+    if (infoBtn) {
+      infoBtn.style.display = hasInfo ? '' : 'none';
     }
 
     document.getElementById('photo-viewer-modal').classList.remove('hidden');

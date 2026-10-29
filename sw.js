@@ -1,5 +1,5 @@
 // Service Worker for Sangwon's Phone PWA
-const CACHE_NAME = 'sangwon-phone-v2';
+const CACHE_NAME = 'sangwon-phone-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
