@@ -168,6 +168,10 @@
       state.chats = chatsRes;
     } catch (e) {
       console.warn('Data fetch fallback:', e);
+      if (typeof window !== 'undefined' && window.APP_FALLBACK_DATA) {
+        state.config = window.APP_FALLBACK_DATA.config;
+        state.chats = window.APP_FALLBACK_DATA.chats;
+      }
     }
 
     applyConfig();
@@ -202,17 +206,24 @@
       document.getElementById('lock-hint-text').textContent = owner.pinHint;
     }
 
-    const savedLockWall = localStorage.getItem('sangwon_phone_lock_wallpaper') || owner.wallpaper;
-    if (savedLockWall) {
-      const lockBg = document.getElementById('lock-wallpaper-bg');
-      if (lockBg) lockBg.style.backgroundImage = `url('${savedLockWall}')`;
+    // Clean stale localStorage entries that might point to old non-photo wallpapers
+    let savedLockWall = localStorage.getItem('sangwon_phone_lock_wallpaper');
+    if (savedLockWall && (savedLockWall.includes('wallpaper_lock') || !savedLockWall.includes('photo_'))) {
+      savedLockWall = null;
+      localStorage.removeItem('sangwon_phone_lock_wallpaper');
+    }
+    let savedHomeWall = localStorage.getItem('sangwon_phone_home_wallpaper');
+    if (savedHomeWall && (savedHomeWall.includes('wallpaper_home') || !savedHomeWall.includes('photo_'))) {
+      savedHomeWall = null;
+      localStorage.removeItem('sangwon_phone_home_wallpaper');
     }
 
-    const savedHomeWall = localStorage.getItem('sangwon_phone_home_wallpaper') || owner.homeWallpaper;
-    if (savedHomeWall) {
-      const homeBg = document.getElementById('home-wallpaper-bg');
-      if (homeBg) homeBg.style.backgroundImage = `url('${savedHomeWall}')`;
-    }
+    const lockWall = savedLockWall || owner.wallpaper || 'assets/photos/photo_18.jpg';
+    const homeWall = savedHomeWall || owner.homeWallpaper || 'assets/photos/photo_14.jpg';
+    const lockBg = document.getElementById('lock-wallpaper-bg');
+    if (lockBg) lockBg.style.backgroundImage = `url('${lockWall}')`;
+    const homeBg = document.getElementById('home-wallpaper-bg');
+    if (homeBg) homeBg.style.backgroundImage = `url('${homeWall}')`;
 
     if (notification) {
       document.getElementById('notif-app-name').textContent = notification.appName || 'MESSAGES';
@@ -1143,21 +1154,34 @@
 
     // 4. Global Home Indicator (Swipe-Up Bar)
     const homeZone = document.getElementById('home-indicator-zone');
-    homeZone.addEventListener('click', () => {
-      closeCurrentApp();
-    });
-
-    let touchStartY = 0;
-    homeZone.addEventListener('touchstart', (e) => {
-      touchStartY = e.touches[0].clientY;
-    }, { passive: true });
-
-    homeZone.addEventListener('touchend', (e) => {
-      const touchEndY = e.changedTouches[0].clientY;
-      if (touchStartY - touchEndY > 20) {
+    if (homeZone) {
+      homeZone.addEventListener('click', () => {
+        SoundFx.tap();
         closeCurrentApp();
-      }
-    }, { passive: true });
+      });
+
+      let touchStartY = 0;
+      homeZone.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+
+      homeZone.addEventListener('touchend', (e) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        if (touchStartY - touchEndY > 20) {
+          SoundFx.tap();
+          closeCurrentApp();
+        }
+      }, { passive: true });
+    }
+
+    // 4b. Explicit Header Back-to-Home Buttons for all apps
+    document.querySelectorAll('.nav-back-to-home-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        SoundFx.tap();
+        closeCurrentApp();
+      });
+    });
 
     // 5. Hardware & Desktop Buttons
     document.getElementById('hardware-power-btn').addEventListener('click', () => {

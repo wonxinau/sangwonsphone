@@ -11,7 +11,7 @@
   <title>Sangwon's Phone • ALD1</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" href="assets/icon_192.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 
 <body>
@@ -342,16 +342,11 @@
           <div class="app-view active" id="messages-list-view">
             <header class="app-nav-bar">
               <div class="nav-left">
-                <span class="nav-text-btn">Edit</span>
+                <button class="nav-back-to-home-btn" title="Back to Home">‹ Home</button>
               </div>
               <h2 class="nav-title">Messages</h2>
               <div class="nav-right">
-                <button class="nav-icon-btn" title="Compose">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                    <path
-                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
-                  </svg>
-                </button>
+                <span class="nav-text-btn">Edit</span>
               </div>
             </header>
 
@@ -441,6 +436,9 @@
         <!-- -------------------------------------------- -->
         <article class="app-window" id="app-window-photos">
           <header class="app-nav-bar">
+            <div class="nav-left">
+              <button class="nav-back-to-home-btn" title="Back to Home">‹ Home</button>
+            </div>
             <h2 class="nav-title">Photos</h2>
             <div class="nav-right">
               <span class="nav-text-btn">Select</span>
@@ -513,7 +511,7 @@
           <div class="app-view active" id="notes-list-view">
             <header class="app-nav-bar notes-nav-bar">
               <div class="nav-left">
-                <span class="notes-folder-tag">Folders</span>
+                <button class="nav-back-to-home-btn" title="Back to Home">‹ Home</button>
               </div>
               <h2 class="nav-title">Notes</h2>
               <div class="nav-right">
@@ -604,6 +602,9 @@
         <!-- -------------------------------------------- -->
         <article class="app-window" id="app-window-phone">
           <header class="app-nav-bar">
+            <div class="nav-left">
+              <button class="nav-back-to-home-btn" title="Back to Home">‹ Home</button>
+            </div>
             <h2 class="nav-title" id="phone-nav-title">Recents</h2>
             <div class="nav-right">
               <span class="nav-text-btn">Edit</span>
@@ -706,7 +707,11 @@
         <!-- -------------------------------------------- -->
         <article class="app-window" id="app-window-settings">
           <header class="app-nav-bar">
+            <div class="nav-left">
+              <button class="nav-back-to-home-btn" title="Back to Home">‹ Home</button>
+            </div>
             <h2 class="nav-title">Settings</h2>
+            <div class="nav-right"></div>
           </header>
           <div class="settings-scroll-area">
             <div class="settings-profile-card">
@@ -749,27 +754,23 @@
                 <span class="row-arrow">›</span>
               </div>
             </div>
-
-
-
-            </ul>
           </div>
+        </article>
+
       </div>
-      </article>
 
-    </div>
-
-    <!-- ============================================== -->
-    <!-- GLOBAL HOME INDICATOR (SWIPE-UP BAR)           -->
-    <!-- ============================================== -->
-    <div class="home-indicator-zone" id="home-indicator-zone" title="Swipe or click to go Home">
-      <div class="home-indicator-bar" id="home-indicator-bar"></div>
-    </div>
+      <!-- ============================================== -->
+      <!-- GLOBAL HOME INDICATOR (SWIPE-UP BAR)           -->
+      <!-- ============================================== -->
+      <div class="home-indicator-zone" id="home-indicator-zone" title="Swipe or click to go Home">
+        <div class="home-indicator-bar" id="home-indicator-bar"></div>
+      </div>
 
     </div>
   </main>
 
-  <script src="app.js"></script>
+  <script src="data/fallback_data.js"></script>
+  <script src="app.js?v=6"></script>
 </body>
 
 </html>

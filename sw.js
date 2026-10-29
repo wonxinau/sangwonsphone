@@ -1,15 +1,18 @@
 // Service Worker for Sangwon's Phone PWA
-const CACHE_NAME = 'sangwon-phone-v5';
+const CACHE_NAME = 'sangwon-phone-v6';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './style.css',
   './app.js',
   './manifest.json',
+  './data/fallback_data.js',
   './data/config.json',
   './data/chats.json',
   './assets/wallpaper_lock.jpg',
   './assets/wallpaper_home.jpg',
+  './assets/photos/photo_18.jpg',
+  './assets/photos/photo_14.jpg',
   './assets/avatar_sangwon.jpg',
   './assets/avatar_anxin.jpg',
   './assets/avatar_noona.jpg',

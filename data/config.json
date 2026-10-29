@@ -12,8 +12,8 @@
     "batteryLevel": 89,
     "pin": "1225",
     "pinHint": "Hint: Anxinie's birthday.",
-    "wallpaper": "assets/wallpaper_lock.jpg",
-    "homeWallpaper": "assets/wallpaper_home.jpg"
+    "wallpaper": "assets/photos/photo_18.jpg",
+    "homeWallpaper": "assets/photos/photo_14.jpg"
   },
   "notification": {
     "delayMs": 2000,

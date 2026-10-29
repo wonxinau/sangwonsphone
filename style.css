@@ -1150,6 +1150,25 @@ html, body {
   cursor: pointer;
 }
 
+.nav-back-to-home-btn {
+  background: transparent;
+  border: none;
+  color: var(--ios-blue);
+  font-size: 16px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 4px 6px 4px 0;
+  border-radius: 6px;
+  transition: opacity 0.15s ease;
+}
+
+.nav-back-to-home-btn:active {
+  opacity: 0.6;
+}
+
 .nav-icon-btn {
   background: transparent;
   border: none;
@@ -2563,12 +2582,13 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 28px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 95;
+  z-index: 1000;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 .home-indicator-bar {
