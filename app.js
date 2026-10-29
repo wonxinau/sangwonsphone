@@ -60,7 +60,7 @@
         gain.connect(state.audioCtx.destination);
         osc.start();
         osc.stop(state.audioCtx.currentTime + 0.03);
-      } catch (e) {}
+      } catch (e) { }
       if (navigator.vibrate) navigator.vibrate(10);
     },
 
@@ -82,7 +82,7 @@
           osc.start(now + idx * 0.06);
           osc.stop(now + idx * 0.06 + 0.22);
         });
-      } catch (e) {}
+      } catch (e) { }
       if (navigator.vibrate) navigator.vibrate([15, 30, 20]);
     },
 
@@ -104,7 +104,7 @@
           osc.start(now + idx * 0.1);
           osc.stop(now + idx * 0.1 + 0.12);
         });
-      } catch (e) {}
+      } catch (e) { }
       if (navigator.vibrate) navigator.vibrate([40, 40, 40]);
     },
 
@@ -127,7 +127,7 @@
           osc.start(now + idx * 0.12);
           osc.stop(now + idx * 0.12 + 0.35);
         });
-      } catch (e) {}
+      } catch (e) { }
       if (navigator.vibrate) navigator.vibrate([20, 50, 30]);
     },
 
@@ -150,7 +150,7 @@
         osc2.start();
         osc1.stop(state.audioCtx.currentTime + 0.15);
         osc2.stop(state.audioCtx.currentTime + 0.15);
-      } catch (e) {}
+      } catch (e) { }
       if (navigator.vibrate) navigator.vibrate(12);
     }
   };
@@ -521,7 +521,7 @@
 
     const row = document.createElement('div');
     row.className = `chat-bubble-row ${isSent ? 'sent' : 'received'}`;
-    
+
     let bubbleContent = '';
     if (image) {
       bubbleContent += `<div class="chat-photo-wrap"><img src="${image}" alt="Photo" class="chat-photo-attachment" loading="lazy"></div>`;
@@ -763,9 +763,9 @@
       return state.config.photos.filter(p => p.favorite === true);
     }
     if (state.activePhotosTab === 'anxin') {
-      return state.config.photos.filter(p => 
-        p.category === 'anxin' || 
-        (p.title && p.title.toLowerCase().includes('anxin')) || 
+      return state.config.photos.filter(p =>
+        p.category === 'anxin' ||
+        (p.title && p.title.toLowerCase().includes('anxin')) ||
         (p.caption && p.caption.toLowerCase().includes('anxin')) ||
         p.favorite
       );
@@ -1220,10 +1220,10 @@
       island.classList.toggle('expanded');
       const text = document.getElementById('island-text');
       if (island.classList.contains('expanded')) {
-        text.textContent = 'Playing: Our Secret Frequency (02:14)';
+        text.textContent = 'Playing: Angel 2 me (02:14)';
         setTimeout(() => island.classList.remove('expanded'), 4000);
       } else {
-        text.textContent = 'ALD1 Duo';
+        text.textContent = '12199';
       }
     });
 

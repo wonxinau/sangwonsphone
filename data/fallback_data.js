@@ -432,7 +432,6 @@ window.APP_FALLBACK_DATA = {
         "id": "note_2",
         "title": "Private Diary - For Anxinie",
         "date": "Dec 04, 2026",
-        "snippet": "LOCKED NOTE • Our secret rooftop confession & promise.",
         "locked": true,
         "pin": "1221",
         "pinHint": "Hint: Our anniversary date (1221)!",
