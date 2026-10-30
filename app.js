@@ -182,7 +182,7 @@
     setupPhoneApp();
     registerServiceWorker();
 
-    console.log("Sangwon's Phone initialized. Love PIN:", state.config?.owner?.pin || '0520');
+    console.log("Sangwon's Phone initialized. Love PIN:", state.config?.owner?.pin || '1225');
   }
 
   function applyConfig() {
@@ -204,6 +204,13 @@
 
     if (owner.pinHint) {
       document.getElementById('lock-hint-text').textContent = owner.pinHint;
+    }
+
+    if (owner.pin) {
+      const desktopHintBtn = document.getElementById('btn-desktop-hint');
+      if (desktopHintBtn) desktopHintBtn.textContent = `Autofill PIN (${owner.pin})`;
+      const swipeHint = document.querySelector('.swipe-hint');
+      if (swipeHint) swipeHint.textContent = `Swipe up or enter ${owner.pin} to unlock`;
     }
 
     // Clean stale localStorage entries that might point to old non-photo wallpapers
@@ -271,7 +278,7 @@
   }
 
   function verifyLockPin() {
-    const targetPin = (state.config && state.config.owner && state.config.owner.pin) || '0520';
+    const targetPin = (state.config && state.config.owner && state.config.owner.pin) || '1225';
     const pinDots = document.getElementById('pin-dots');
 
     if (state.lockPinBuffer === targetPin) {
@@ -1126,7 +1133,7 @@
 
     const autofillPin = () => {
       SoundFx.tap();
-      const targetPin = (state.config && state.config.owner && state.config.owner.pin) || '0520';
+      const targetPin = (state.config && state.config.owner && state.config.owner.pin) || '1225';
       state.lockPinBuffer = targetPin;
       updatePinDots();
       setTimeout(verifyLockPin, 150);

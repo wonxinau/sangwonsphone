@@ -30,9 +30,9 @@ with sync_playwright() as p:
     print("[TEST 2] Wrong PIN triggered shake animation.")
     time.sleep(0.6)
 
-    # 3. Enter right PIN (0520 = 我爱你)
-    print("[TEST 3] Entering romance PIN (0520)...")
-    for digit in ['0', '5', '2', '0']:
+    # 3. Enter right PIN (1225)
+    print("[TEST 3] Entering PIN (1225)...")
+    for digit in ['1', '2', '2', '5']:
         page.click(f'.keypad-btn[data-key="{digit}"]')
         time.sleep(0.08)
     page.wait_for_selector('#home-screen.active', timeout=3000)

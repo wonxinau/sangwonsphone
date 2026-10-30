@@ -20,7 +20,7 @@ Visitors "snoop" on Sangwon's phone, discovering late-night practice room texts,
 
 1. **Lock Screen**:
    - Fixed fake clock: `23:48`, Friday, December 4th.
-   - **PIN:** `0520` (Iconic romantic number: *520 = 我爱你 / I love you*).
+   - **PIN:** `1225` (Anxinie's birthday).
    - Tap "Hint" or "Autofill PIN" for immediate testing.
    - Wrong PIN shakes with red warning animation; correct PIN unlocks to Home Screen.
 2. **Home Screen & Notification**:
@@ -86,7 +86,7 @@ The Photos app will automatically load it into the 3-column grid and fullscreen 
 
 ## ⚙️ How to Customize Messages, Names, & PINs
 
-- **Lock Screen PIN**: Open [`data/config.json`](data/config.json) and change `"pin": "0520"`.
+- **Lock Screen PIN**: Open [`data/config.json`](data/config.json) and change `"pin": "1225"`.
 - **Secret Note PIN**: Open [`data/config.json`](data/config.json) and change `"pin": "1204"` under note 3.
 - **Messages & Contacts**: Open [`data/chats.json`](data/chats.json) to edit or add new conversations, messages, and typing triggers.
 
